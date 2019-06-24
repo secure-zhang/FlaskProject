@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/WebDisplay/daily.py" line="44" />
+  </component>
+  <component name="ChangeListManager">
+<<<<<<< Updated upstream
+    <list default="true" id="8a716b81-2852-4ebe-b5ca-fe9a855c424a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DataSpider/xiangjiao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDisplay/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebDisplay/make_img_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataSpider/shuhua.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataSpider/shuhua.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDisplay/daily.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebDisplay/daily.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDisplay/make_img.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebDisplay/make_img.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDisplay/mysql_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebDisplay/mysql_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDisplay/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebDisplay/send_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDisplay/static/images/jiachun/jklr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDisplay/static/images/shuhua/jbx_cmdl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDisplay/static/images/youzhi/tljc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDisplay/static/images/yuanyou/jc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDisplay/templates/daily/shuhua.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebDisplay/templates/daily/shuhua.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebDisplay/templates/daily/xiangjiao.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebDisplay/templates/daily/xiangjiao.html" afterDir="false" />
+    </list>
+=======
+    <list default="true" id="8a716b81-2852-4ebe-b5ca-fe9a855c424a" name="Default Changelist" comment="" />
+>>>>>>> Stashed changes
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/GT$xiangjiao.coverage" NAME="xiangjiao Coverage Results" MODIFIED="1559644766561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataSpider" />
+    <SUITE FILE_PATH="coverage/GT$make_img_test.coverage" NAME="make_img_test Coverage Results" MODIFIED="1559645019763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebDisplay" />
+    <SUITE FILE_PATH="coverage/GT$manager__1_.coverage" NAME="manager (1) Coverage Results" MODIFIED="1559641378705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebDisplay" />
+    <SUITE FILE_PATH="coverage/GT$daily.coverage" NAME="daily Coverage Results" MODIFIED="1559555644819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebDisplay" />
+    <SUITE FILE_PATH="coverage/GT$make_img__1_.coverage" NAME="make_img (1) Coverage Results" MODIFIED="1559635220931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebDisplay/static" />
+    <SUITE FILE_PATH="coverage/GT$shuhua.coverage" NAME="shuhua Coverage Results" MODIFIED="1559638468208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataSpider" />
+    <SUITE FILE_PATH="coverage/GT$make_img__2_.coverage" NAME="make_img (2) Coverage Results" MODIFIED="1559635570042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebDisplay" />
+    <SUITE FILE_PATH="coverage/GT$make_img.coverage" NAME="make_img Coverage Results" MODIFIED="1559633428186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebDisplay" />
+    <SUITE FILE_PATH="coverage/GT$mysql_db.coverage" NAME="mysql_db Coverage Results" MODIFIED="1559613190702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebDisplay" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="GT" />
+  </component>
+  <component name="FileEditorManager">
+<<<<<<< Updated upstream
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataSpider/shuhua.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2900">
+              <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
+              <folding>
+                <element signature="e#41#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebDisplay/make_img.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-854">
+              <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+              <folding>
+                <element signature="e#24#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> Stashed changes
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>topbox</find>
+      <find>navbar</find>
+      <find>welcome</find>
+      <find>main</find>
+      <find>color</find>
+      <find>verify_password</find>
+      <find>head</find>
+      <find>print</find>
+      <find>[</find>
+      <find>date</find>
+      <find>data_list15</find>
+      <find>data_list16</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/error.html" />
+        <option value="$PROJECT_DIR$/templates/daily.py" />
+        <option value="$PROJECT_DIR$/views.py" />
+        <option value="$PROJECT_DIR$/model_test.py" />
+        <option value="$PROJECT_DIR$/write_pass.py" />
+        <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/static/js/config.js" />
+        <option value="$PROJECT_DIR$/templates/shuhua.html" />
+        <option value="$PROJECT_DIR$/templates/daily/guzhi.html" />
+        <option value="$PROJECT_DIR$/templates/register.html" />
+        <option value="$PROJECT_DIR$/templates/jiachun.html" />
+        <option value="$PROJECT_DIR$/templates/daily/shuhua.html" />
+        <option value="$PROJECT_DIR$/templates/daily/xiangjiao.html" />
+        <option value="$PROJECT_DIR$/daily.py" />
+        <option value="$PROJECT_DIR$/templates/daily/jiachun.html" />
+        <option value="$PROJECT_DIR$/templates/daily/youzhi.html" />
+        <option value="$PROJECT_DIR$/templates/daily/yuanyou.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/mysql_db.py" />
+        <option value="$PROJECT_DIR$/templates/datas/cjcc.html" />
+        <option value="$PROJECT_DIR$/datas.py" />
+        <option value="$PROJECT_DIR$/templates/send_mail.py" />
+        <option value="$PROJECT_DIR$/send_mail.py" />
+        <option value="$PROJECT_DIR$/user.py" />
+        <option value="$PROJECT_DIR$/manager.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/form.py" />
+        <option value="$PROJECT_DIR$/send_email.py" />
+        <option value="$PROJECT_DIR$/templates/datas/send_email.html" />
+        <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/README.md" />
+        <option value="$PROJECT_DIR$/WebDisplay/model.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/user.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/form.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/manager.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/write_pass.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/model_test.py" />
+        <option value="$PROJECT_DIR$/DataSpider/config.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/datas.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/mysql_db.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/send_email.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/__init__.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/templates/daily/shuhua.html" />
+        <option value="$PROJECT_DIR$/WebDisplay/static/make_img.py" />
+        <option value="$PROJECT_DIR$/DataSpider/shuhua.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/daily.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/make_img.py" />
+        <option value="$PROJECT_DIR$/DataSpider/xiangjiao.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/make_img_test.py" />
+        <option value="$PROJECT_DIR$/WebDisplay/templates/daily/xiangjiao.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="123" />
+    <option name="y" value="197" />
+    <option name="width" value="973" />
+    <option name="height" value="1022" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GT" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GT" type="462c0819:PsiDirectoryNode" />
+              <item name="WebDisplay" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GT" type="462c0819:PsiDirectoryNode" />
+              <item name="WebDisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GT" type="462c0819:PsiDirectoryNode" />
+              <item name="WebDisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GT" type="462c0819:PsiDirectoryNode" />
+              <item name="WebDisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="xiangjiao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GT" type="462c0819:PsiDirectoryNode" />
+              <item name="WebDisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GT" type="462c0819:PsiDirectoryNode" />
+              <item name="WebDisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="daily" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/GtWorkZhang/GT/DataSpider/config.py" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GtWorkZhang\Flaskproject\FlaskProject\GT\WebDisplay" />
+      <recent name="D:\GtWorkZhang\GT" />
+      <recent name="D:\GtWorkZhang\GT\WebDisplay" />
+      <recent name="E:\MyProjectPycharm\GT" />
+      <recent name="E:\MyProjectPycharm\GT\templates\daily" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GtWorkZhang\Flaskproject\FlaskProject\GT\WebDisplay" />
+      <recent name="D:\GtWorkZhang\Flaskproject\FlaskProject\GT\WebDisplay\static\images\shuhua" />
+      <recent name="E:\MyProjectPycharm\GT\static\images\yuanyou" />
+      <recent name="E:\MyProjectPycharm\GT\static\images\youzhi" />
+      <recent name="E:\MyProjectPycharm\GT\static\images\jiachun" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.make_img_test">
+    <configuration name="make_img (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WebDisplay" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WebDisplay/make_img.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="make_img_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WebDisplay" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WebDisplay/make_img_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="manager (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WebDisplay" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WebDisplay/manager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="shuhua" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\GuantongZhangJobs\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataSpider" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataSpider/shuhua.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="xiangjiao" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\GuantongZhangJobs\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataSpider" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataSpider/xiangjiao.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="GT" type="Python.FlaskServer" factoryName="Flask server">
+      <module name="GT" />
+      <option name="target" value="$PROJECT_DIR$/__init__.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Flask server.GT" />
+      <item itemvalue="Python.manager (1)" />
+      <item itemvalue="Python.shuhua" />
+      <item itemvalue="Python.make_img (2)" />
+      <item itemvalue="Python.xiangjiao" />
+      <item itemvalue="Python.make_img_test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.make_img_test" />
+        <item itemvalue="Python.xiangjiao" />
+        <item itemvalue="Python.manager (1)" />
+        <item itemvalue="Python.shuhua" />
+        <item itemvalue="Python.make_img (2)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8a716b81-2852-4ebe-b5ca-fe9a855c424a" name="Default Changelist" comment="" />
+      <created>1559370517748</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559370517748</updated>
+      <workItem from="1559370520217" duration="1139000" />
+      <workItem from="1559389122513" duration="1567000" />
+      <workItem from="1559390749970" duration="8288000" />
+      <workItem from="1559399234489" duration="14703000" />
+      <workItem from="1559443496720" duration="33685000" />
+      <workItem from="1559571605018" duration="3385000" />
+      <workItem from="1559575892406" duration="1386000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="64153000" />
+  </component>
+  <component name="ToolWindowManager">
+<<<<<<< Updated upstream
+    <frame x="54" y="-8" width="1234" height="1040" extended-state="6" />
+    <layout>
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979253" visible="true" weight="0.15733737" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5020747" side_tool="true" weight="0.11875945" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34262297" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+>>>>>>> Stashed changes
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+<<<<<<< Updated upstream
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4526432" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979253" weight="0.1362862" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+=======
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.5098336" />
+>>>>>>> Stashed changes
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.23679727" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5020747" side_tool="true" weight="0.11875945" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39977974" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979253" visible="true" weight="0.21039182" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3960396" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info id="Favorites" order="2" sideWeight="0.5020747" side_tool="true" weight="0.11875945" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GT$views.coverage" NAME="views Coverage Results" MODIFIED="1559444719721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GT$manager.coverage" NAME="manager Coverage Results" MODIFIED="1559481500305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GT$send_mail.coverage" NAME="send_mail Coverage Results" MODIFIED="1559480371782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates" />
+    <SUITE FILE_PATH="coverage/GT$mysql_db.coverage" NAME="mysql_db Coverage Results" MODIFIED="1559478677597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GT$make_img.coverage" NAME="make_img Coverage Results" MODIFIED="1559577406005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebDisplay" />
+    <SUITE FILE_PATH="coverage/GT$write_pass.coverage" NAME="write_pass Coverage Results" MODIFIED="1559448057982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GT$send_email.coverage" NAME="send_email Coverage Results" MODIFIED="1559481278177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/.virtualenvs/Flaskproject-ZYaF4_SS/Lib/site-packages/werkzeug/security.py" />
+    <entry file="file://$USER_HOME$/.virtualenvs/Flaskproject-ZYaF4_SS/Lib/site-packages/flask_login/utils.py" />
+    <entry file="file://$PROJECT_DIR$/WebDisplay/profiles.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/static/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/ft-carousel.css" />
+    <entry file="file://$PROJECT_DIR$/static/js/ft-carousel.min.js" />
+    <entry file="file://$PROJECT_DIR$/jiaoben5589/index.html" />
+    <entry file="file://$PROJECT_DIR$/WebDisplay/templates/daily/guzhi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="245" selection-start-line="245" selection-end-line="249" selection-end-column="13" />
+          <folding>
+            <element signature="e#476#545#0#HTML" expanded="true" />
+            <element signature="e#698#730#0#HTML" expanded="true" />
+            <element signature="e#820#881#0#HTML" expanded="true" />
+            <element signature="e#3593#3626#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/templates/daily/youzhi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="259" column="23" selection-end-line="334" selection-end-column="14" />
+          <folding>
+            <element signature="n#tr#0;n#table#0;n#div#0;n#!!top" />
+            <element signature="n#td#0;n#tr#0;n#table#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#tr#1;n#table#0;n#div#0;n#!!top" />
+            <element signature="n#tr#2;n#table#0;n#div#0;n#!!top" />
+            <element signature="e#1222#1246#0#HTML" expanded="true" />
+            <element signature="e#1202#1233#0#HTML" />
+            <element signature="e#1491#1515#0#HTML" expanded="true" />
+            <element signature="e#1317#1415#0#HTML" />
+            <element signature="e#1865#1954#0#HTML" />
+            <element signature="e#1972#2226#0#HTML" />
+            <element signature="e#2291#2360#0#HTML" />
+            <element signature="e#2405#2668#0#HTML" />
+            <element signature="e#2661#2692#0#HTML" />
+            <element signature="e#2865#3052#0#HTML" />
+            <element signature="e#3084#3347#0#HTML" />
+            <element signature="e#3357#3544#0#HTML" />
+            <element signature="e#3553#3740#0#HTML" />
+            <element signature="e#3491#3754#0#HTML" />
+            <element signature="e#4037#4224#0#HTML" />
+            <element signature="e#4233#4420#0#HTML" />
+            <element signature="e#3898#4161#0#HTML" />
+            <element signature="e#4717#4904#0#HTML" />
+            <element signature="e#4913#5100#0#HTML" />
+            <element signature="e#4305#4568#0#HTML" />
+            <element signature="e#5397#5584#0#HTML" />
+            <element signature="e#5593#5780#0#HTML" />
+            <element signature="e#5642#6130#0#HTML" />
+            <element signature="e#5698#5731#0#HTML" expanded="true" />
+            <element signature="e#5933#5966#0#HTML" expanded="true" />
+            <element signature="e#6117#6207#0#HTML" />
+            <element signature="e#6249#6570#0#HTML" />
+            <element signature="e#6579#6668#0#HTML" />
+            <element signature="e#6677#6708#0#HTML" />
+            <element signature="e#6925#7164#0#HTML" />
+            <element signature="e#7148#7362#0#HTML" />
+            <element signature="e#7360#7599#0#HTML" />
+            <element signature="e#7608#7809#0#HTML" />
+            <element signature="e#7818#8019#0#HTML" />
+            <element signature="e#8053#8293#0#HTML" />
+            <element signature="e#8278#8481#0#HTML" />
+            <element signature="e#8531#8771#0#HTML" />
+            <element signature="e#8780#8979#0#HTML" />
+            <element signature="e#8988#9187#0#HTML" />
+            <element signature="e#9199#9679#0#HTML" />
+            <element signature="e#9255#9288#0#HTML" expanded="true" />
+            <element signature="e#9486#9519#0#HTML" expanded="true" />
+            <element signature="e#9696#9766#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/templates/daily/yuanyou.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="121" column="27" selection-start-line="121" selection-start-column="27" selection-end-line="121" selection-end-column="27" />
+          <folding>
+            <element signature="e#591#735#0#HTML" />
+            <element signature="e#684#716#0#HTML" expanded="true" />
+            <element signature="e#823#868#0#HTML" expanded="true" />
+            <element signature="e#794#946#0#HTML" />
+            <element signature="e#969#1079#0#HTML" />
+            <element signature="e#1088#1158#0#HTML" />
+            <element signature="e#1184#1575#0#HTML" />
+            <element signature="e#1588#1658#0#HTML" />
+            <element signature="e#2152#2222#0#HTML" />
+            <element signature="e#2111#2297#0#HTML" />
+            <element signature="e#2326#2512#0#HTML" />
+            <element signature="e#3221#3406#0#HTML" />
+            <element signature="e#2521#2591#0#HTML" />
+            <element signature="e#2617#3105#0#HTML" />
+            <element signature="e#2673#2706#0#HTML" expanded="true" />
+            <element signature="e#2908#2941#0#HTML" expanded="true" />
+            <element signature="e#3114#3184#0#HTML" />
+            <element signature="e#3194#3682#0#HTML" />
+            <element signature="e#3250#3283#0#HTML" expanded="true" />
+            <element signature="e#3485#3518#0#HTML" expanded="true" />
+            <element signature="e#3691#3761#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/templates/daily/jiachun.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="110" column="1" lean-forward="true" selection-end-line="120" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/templates/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="27" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="56" column="78" selection-start-line="56" selection-start-column="78" selection-end-line="56" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/templates/datas/cjcc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/templates/datas/send_email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/piplist.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#11#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#12#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/write_pass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/model_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#25#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/datas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" selection-start-line="21" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/static/images/shuhua/jdd3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/static/images/shuhua/jdd2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/static/images/shuhua/jdd1.png%2C_t%3Dval1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/send_email.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+          <folding>
+            <element signature="e#31#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/static/images/shuhua/jdd1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/static/images/shuhua/%s.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/Flaskproject--HNY2Fq6/Lib/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="1083" column="4" selection-start-line="1083" selection-start-column="4" selection-end-line="1083" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/static/images/shuhua/jicha1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/static/images/shuhua/jicha2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/static/images/shuhua/jiacha3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/static/images/shuhua/jiacha2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/static/images/shuhua/jiacha1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/mysql_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataSpider/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <element signature="e#23#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" selection-start-line="8" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#25#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="230" selection-start-line="230" selection-end-line="230" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/templates/daily/shuhua.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="116" column="30" selection-start-line="116" selection-start-column="30" selection-end-line="116" selection-end-column="95" />
+          <folding>
+            <element signature="e#1274#1298#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/templates/daily/xiangjiao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
+          <folding>
+            <element signature="e#1286#1310#0#HTML" expanded="true" />
+            <element signature="e#2540#2573#0#HTML" expanded="true" />
+            <element signature="e#2775#2808#0#HTML" expanded="true" />
+            <element signature="e#3116#3149#0#HTML" expanded="true" />
+            <element signature="e#3351#3384#0#HTML" expanded="true" />
+            <element signature="e#3962#4009#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/daily.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
+          <folding>
+            <element signature="e#25#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataSpider/xiangjiao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-109">
+          <caret line="196" column="29" lean-forward="true" selection-start-line="196" selection-start-column="29" selection-end-line="196" selection-end-column="29" />
+          <folding>
+            <element signature="e#41#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/make_img.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
+        <state relative-caret-position="148">
+          <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="77" selection-end-column="38" />
+=======
+        <state relative-caret-position="-854">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+>>>>>>> Stashed changes
+          <folding>
+            <element signature="e#24#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebDisplay/make_img_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="224" selection-start-line="224" selection-end-line="224" />
+          <folding>
+            <element signature="e#24#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataSpider/shuhua.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="174" column="8" selection-start-line="174" selection-start-column="8" selection-end-line="174" selection-end-column="8" />
+          <folding>
+            <element signature="e#41#66#0" expanded="true" />
+            <element signature="e#7840#8416#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

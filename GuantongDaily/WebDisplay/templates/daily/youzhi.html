@@ -1,0 +1,566 @@
+{% extends 'base.html' %}
+{% block main %}
+    <style>
+    table{border: 2px solid black;background-color: white;margin: 0 auto;width:980px;line-height: 30px;}
+    .content_left{font-size: 14px;text-align: left;text-indent: 2em}
+    .line_hight{background-color: #5b80b2;height: 10px;}
+    .font_color{text-align: center;color: #0C0C0C;font-weight: bold;}
+    .whites{font-size: 20px;text-align: center;color: white;font-weight: bold}
+    .text_center{text-align: center}
+    .right_border{border-right: 1px solid black}
+</style>
+<div class="main">
+    <table id="table" border='1'  cellpadding='0' cellspacing='0 ' style="table-layout:fixed;word-wrap:break-word;word-break:break-all;">
+        <!--表头-->
+        <tr class="tableHead" >
+            <td rowspan="2" colspan="3"  style="border: none">
+                <img src="../../static/images/gtqh.png" alt="" style="width: 100%;height: 100%">
+            </td>
+            <td rowspan="2" colspan="1" style="border: none"></td>
+            <td rowspan="1" colspan="4"  style="font-size: 30px ;font-weight: normal;border: none" class="font_color">
+                <span class="">油脂油料信息速览</span>
+            </td>
+        </tr>
+        <tr class="font_color" >
+            <td colspan="2" style="border: none"></td>
+            <td colspan="2" style="border: none">{{ today }}</td>
+        </tr>
+        <tr class="line_hight">
+            <td colspan="8" class="whites" >市场观点</td>
+        </tr>
+        <tr class="content_left" style="text-indent:2em;">
+            <td colspan="1" class="font_color">国产豆方面</td>
+            <td colspan="7">
+                <p>    各地余粮基本见底，市场供需格局偏紧，贸易商销售心态得到提振，报价仍有上涨，利好国产大豆市场行情。不过，下游对南方高价接受度不高，且大豆种植面积增加，后期大豆产量或将增加，一定程度上抑制了大豆涨幅。总体来看，短线国产大豆行情或仍有上涨的可能。</p>
+            </td>
+        </tr>
+
+{#        市场追踪#}
+        <tr class="line_hight">
+            <td colspan="8" class="whites" >市场追踪</td>
+        </tr>
+        <tr class=" font_color">
+            <td colspan="1" rowspan="2">一级指标</td>
+            <td colspan="2" rowspan="2">二级指标</td>
+            <td colspan="1" rowspan="2">今日</td>
+            <td colspan="1" rowspan="2">昨日</td>
+            <td colspan="1" rowspan="2">增减</td>
+            <td colspan="2">同比</td>
+        </tr>
+        <tr class="font_color">
+            <td>数值</td>
+            <td>百分比</td>
+        </tr>
+{#        棕榈油#}
+        <tr class="text_center">
+            <td rowspan="15">跨期价差</td>
+            <td rowspan="3">棕榈油</td>
+            <td>1-5月</td>
+            <td>{{ items.zly_data_item.data1.jg }}</td>
+            <td>{{ items.zly_data_item.data1.zrjg }}</td>
+            <td>{{ items.zly_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>5-9月</td>
+            <td>{{ items.zly_data_item.data2.jg }}</td>
+            <td>{{ items.zly_data_item.data2.zrjg }}</td>
+            <td>{{ items.zly_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>9-1月</td>
+            <td>{{ items.zly_data_item.data3.jg }}</td>
+            <td>{{ items.zly_data_item.data3.zrjg }}</td>
+            <td>{{ items.zly_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#        豆油#}
+        <tr class="text_center">
+            <td rowspan="3">豆油</td>
+            <td>1-5月</td>
+            <td>{{ items.dy_data_item.data1.jg }}</td>
+            <td>{{ items.dy_data_item.data1.zrjg }}</td>
+            <td>{{ items.dy_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>5-9月</td>
+            <td>{{ items.dy_data_item.data2.jg }}</td>
+            <td>{{ items.dy_data_item.data2.zrjg }}</td>
+            <td>{{ items.dy_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>9-1月</td>
+            <td>{{ items.dy_data_item.data3.jg }}</td>
+            <td>{{ items.dy_data_item.data3.zrjg }}</td>
+            <td>{{ items.dy_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#        菜油#}
+        <tr class="text_center">
+            <td rowspan="3">菜油</td>
+            <td>1-5月</td>
+            <td>{{ items.cy_data_item.data1.jg }}</td>
+            <td>{{ items.cy_data_item.data1.zrjg }}</td>
+            <td>{{ items.cy_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>5-9月</td>
+            <td>{{ items.cy_data_item.data2.jg }}</td>
+            <td>{{ items.cy_data_item.data2.zrjg }}</td>
+            <td>{{ items.cy_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>9-1月</td>
+            <td>{{ items.cy_data_item.data3.jg }}</td>
+            <td>{{ items.cy_data_item.data3.zrjg }}</td>
+            <td>{{ items.cy_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#        豆粕#}
+        <tr class="text_center">
+            <td rowspan="3">豆粕</td>
+            <td>1-5月</td>
+            <td>{{ items.dp_data_item.data1.jg }}</td>
+            <td>{{ items.dp_data_item.data1.zrjg }}</td>
+            <td>{{ items.dp_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>5-9月</td>
+            <td>{{ items.dp_data_item.data2.jg }}</td>
+            <td>{{ items.dp_data_item.data2.zrjg }}</td>
+            <td>{{ items.dp_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>9-1月</td>
+            <td>{{ items.dp_data_item.data3.jg }}</td>
+            <td>{{ items.dp_data_item.data3.zrjg }}</td>
+            <td>{{ items.dp_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#        菜粕#}
+        <tr class="text_center">
+            <td rowspan="3">菜粕</td>
+            <td>1-5月</td>
+            <td>{{ items.cp_data_item.data1.jg }}</td>
+            <td>{{ items.cp_data_item.data1.zrjg }}</td>
+            <td>{{ items.cp_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>5-9月</td>
+            <td>{{ items.cp_data_item.data2.jg }}</td>
+            <td>{{ items.cp_data_item.data2.zrjg }}</td>
+            <td>{{ items.cp_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>9-1月</td>
+            <td>{{ items.cp_data_item.data3.jg }}</td>
+            <td>{{ items.cp_data_item.data3.zrjg }}</td>
+            <td>{{ items.cp_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+
+{#  油粕比 #}
+        <tr class="text_center">
+            <td rowspan="2">油粕比</td>
+            <td colspan="2">豆油 / 豆粕</td>
+            <td>{{ items.ypb_data_item.data1.ypb }}</td>
+            <td>{{ items.ypb_data_item.data1.zr_ypb }}</td>
+            <td>{{ items.ypb_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">菜油 / 菜粕</td>
+            <td>{{ items.ypb_data_item.data2.ypb }}</td>
+            <td>{{ items.ypb_data_item.data2.zr_ypb }}</td>
+            <td>{{ items.ypb_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{# 基差 #}
+        <tr class="text_center">
+            <td rowspan="5">基差</td>
+            <td colspan="2">棕榈油 - 广东24</td>
+            <td>{{ items.jc_data_item.data1.jg }}</td>
+            <td>{{ items.jc_data_item.data1.zr_jg }}</td>
+            <td>{{ items.jc_data_item.data1.zd }}</td>
+            <td>{{ items.jc_data_item.data1.tb_v }}</td>
+            <td>{{ items.jc_data_item.data1.tb_b }}</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">豆油 - 张家港4</td>
+            <td>{{ items.jc_data_item.data2.jg }}</td>
+            <td>{{ items.jc_data_item.data2.zr_jg }}</td>
+            <td>{{ items.jc_data_item.data2.zd }}</td>
+            <td>{{ items.jc_data_item.data2.tb_v }}</td>
+            <td>{{ items.jc_data_item.data2.tb_b }}</td>
+        </tr>
+        <tr class="text_center" >
+            <td colspan="2">豆粕 - 张家港</td>
+            <td>{{ items.jc_data_item.data3.jg }}</td>
+            <td>{{ items.jc_data_item.data3.zr_jg }}</td>
+            <td>{{ items.jc_data_item.data3.zd }}</td>
+            <td>{{ items.jc_data_item.data3.tb_v }}</td>
+            <td>{{ items.jc_data_item.data3.tb_b }}</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">菜油 - 江苏</td>
+            <td>{{ items.jc_data_item.data4.jg }}</td>
+            <td>{{ items.jc_data_item.data4.zr_jg }}</td>
+            <td>{{ items.jc_data_item.data4.zd }}</td>
+            <td>{{ items.jc_data_item.data4.tb_v }}</td>
+            <td>{{ items.jc_data_item.data4.tb_b }}</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">菜油 - 广东</td>
+            <td>{{ items.jc_data_item.data5.jg }}</td>
+            <td>{{ items.jc_data_item.data5.zr_jg }}</td>
+            <td>{{ items.jc_data_item.data5.zd }}</td>
+            <td>{{ items.jc_data_item.data5.tb_v }}</td>
+            <td>{{ items.jc_data_item.data5.tb_b }}</td>
+        </tr>
+        <tr class="line_hight text_center">
+            <form action="{{ url_for("youzhi") }}"  method="post" name="make_png">
+                <td colspan="4">
+                    <span class="font_color">跨品种套利价差</span>
+                    <select name="kpztljc1" >
+                        <option value="{{ item.kpztljc1.0 }}">{{ item.kpztljc1.1 }}</option>
+                        <option value="a-1+1月大豆">1月大豆</option>
+                        <option value="a-5+5月大豆">5月大豆</option>
+                        <option value="a-9+9月大豆">9月大豆</option>
+                        <option value="m-1+1月豆粕">1月豆粕</option>
+                        <option value="m-5+5月豆粕">5月豆粕</option>
+                        <option value="m-9+9月豆粕">9月豆粕</option>
+                        <option value="y-1+1月豆油">1月豆油</option>
+                        <option value="y-5+5月豆油">5月豆油</option>
+                        <option value="y-9+9月豆油">9月豆油</option>
+                        <option value="p-1+1月棕榈油">1月棕榈油</option>
+                        <option value="p-5+5月棕榈油">5月棕榈油</option>
+                        <option value="p-9+9月棕榈油">9月棕榈油</option>
+                        <option value="jd-1+1月鸡蛋">1月鸡蛋</option>
+                        <option value="jd-5+5月鸡蛋">5月鸡蛋</option>
+                        <option value="jd-9+9月鸡蛋">9月鸡蛋</option>
+                        <option value="c-1+1月玉米">1月玉米</option>
+                        <option value="c-5+5月玉米">5月玉-米</option>
+                        <option value="c-9+9月玉米">9月玉米</option>
+                        <option value="cs-1+1月玉米淀粉">1月玉米淀粉</option>
+                        <option value="cs-5+5月玉米淀粉">5月玉米淀粉</option>
+                        <option value="cs-9+9月玉米淀粉">9月玉米淀粉</option>
+                        <option value="rs-1+1月菜籽油">1月菜籽油</option>
+                        <option value="rs-5+5月菜籽油">5月菜籽油</option>
+                        <option value="rs-9+9月菜籽油">9月菜籽油</option>
+                        <option value="rm-1+1月菜籽粕">1月菜籽粕</option>
+                        <option value="rm-5+5月菜籽粕">5月菜籽粕</option>
+                        <option value="rm-9+9月菜籽粕">9月菜籽粕</option>
+                        <option value="sr-1+1月白砂糖">1月白砂糖</option>
+                        <option value="sr-5+5月白砂糖">5月白砂糖</option>
+                        <option value="sr-9+9月白砂糖">9月白砂糖</option>
+                        <option value="cf-1+1月棉花">1月棉花</option>
+                        <option value="cf-5+5月棉花">5月棉花</option>
+                        <option value="cf-9+9月棉花">9月棉花</option>
+                    </select> —
+                    <select name="kpztljc2" >
+                        <option value="{{ item.kpztljc2.0 }}">{{ item.kpztljc2.1 }}</option>
+                        <option value="a-1+1月大豆">1月大豆</option>
+                        <option value="a-5+5月大豆">5月大豆</option>
+                        <option value="a-9+9月大豆">9月大豆</option>
+                        <option value="m-1+1月豆粕">1月豆粕</option>
+                        <option value="m-5+5月豆粕">5月豆粕</option>
+                        <option value="m-9+9月豆粕">9月豆粕</option>
+                        <option value="y-1+1月豆油">1月豆油</option>
+                        <option value="y-5+5月豆油">5月豆油</option>
+                        <option value="y-9+9月豆油">9月豆油</option>
+                        <option value="p-1+1月棕榈油">1月棕榈油</option>
+                        <option value="p-5+5月棕榈油">5月棕榈油</option>
+                        <option value="p-9+9月棕榈油">9月棕榈油</option>
+                        <option value="jd-1+1月鸡蛋">1月鸡蛋</option>
+                        <option value="jd-5+5月鸡蛋">5月鸡蛋</option>
+                        <option value="jd-9+9月鸡蛋">9月鸡蛋</option>
+                        <option value="c-1+1月玉米">1月玉米</option>
+                        <option value="c-5+5月玉米">5月玉-米</option>
+                        <option value="c-9+9月玉米">9月玉米</option>
+                        <option value="cs-1+1月玉米淀粉">1月玉米淀粉</option>
+                        <option value="cs-5+5月玉米淀粉">5月玉米淀粉</option>
+                        <option value="cs-9+9月玉米淀粉">9月玉米淀粉</option>
+                        <option value="rs-1+1月菜籽油">1月菜籽油</option>
+                        <option value="rs-5+5月菜籽油">5月菜籽油</option>
+                        <option value="rs-9+9月菜籽油">9月菜籽油</option>
+                        <option value="rm-1+1月菜籽粕">1月菜籽粕</option>
+                        <option value="rm-5+5月菜籽粕">5月菜籽粕</option>
+                        <option value="rm-9+9月菜籽粕">9月菜籽粕</option>
+                        <option value="sr-1+1月白砂糖">1月白砂糖</option>
+                        <option value="sr-5+5月白砂糖">5月白砂糖</option>
+                        <option value="sr-9+9月白砂糖">9月白砂糖</option>
+                        <option value="cf-1+1月棉花">1月棉花</option>
+                        <option value="cf-5+5月棉花">5月棉花</option>
+                        <option value="cf-9+9月棉花">9月棉花</option>
+                    </select>
+                </td>
+                <td colspan="4">
+                    <span class="font_color">品种比价</span>
+                    <select name="pzbj1" >
+                        <option value="{{ item.pzbj1.0 }}">{{ item.pzbj1.1 }}</option>
+                          <option value="a-1+1月大豆">1月大豆</option>
+                        <option value="a-5+5月大豆">5月大豆</option>
+                        <option value="a-9+9月大豆">9月大豆</option>
+                        <option value="m-1+1月豆粕">1月豆粕</option>
+                        <option value="m-5+5月豆粕">5月豆粕</option>
+                        <option value="m-9+9月豆粕">9月豆粕</option>
+                        <option value="y-1+1月豆油">1月豆油</option>
+                        <option value="y-5+5月豆油">5月豆油</option>
+                        <option value="y-9+9月豆油">9月豆油</option>
+                        <option value="p-1+1月棕榈油">1月棕榈油</option>
+                        <option value="p-5+5月棕榈油">5月棕榈油</option>
+                        <option value="p-9+9月棕榈油">9月棕榈油</option>
+                        <option value="jd-1+1月鸡蛋">1月鸡蛋</option>
+                        <option value="jd-5+5月鸡蛋">5月鸡蛋</option>
+                        <option value="jd-9+9月鸡蛋">9月鸡蛋</option>
+                        <option value="c-1+1月玉米">1月玉米</option>
+                        <option value="c-5+5月玉米">5月玉-米</option>
+                        <option value="c-9+9月玉米">9月玉米</option>
+                        <option value="cs-1+1月玉米淀粉">1月玉米淀粉</option>
+                        <option value="cs-5+5月玉米淀粉">5月玉米淀粉</option>
+                        <option value="cs-9+9月玉米淀粉">9月玉米淀粉</option>
+                        <option value="rs-1+1月菜籽油">1月菜籽油</option>
+                        <option value="rs-5+5月菜籽油">5月菜籽油</option>
+                        <option value="rs-9+9月菜籽油">9月菜籽油</option>
+                        <option value="rm-1+1月菜籽粕">1月菜籽粕</option>
+                        <option value="rm-5+5月菜籽粕">5月菜籽粕</option>
+                        <option value="rm-9+9月菜籽粕">9月菜籽粕</option>
+                        <option value="sr-1+1月白砂糖">1月白砂糖</option>
+                        <option value="sr-5+5月白砂糖">5月白砂糖</option>
+                        <option value="sr-9+9月白砂糖">9月白砂糖</option>
+                        <option value="cf-1+1月棉花">1月棉花</option>
+                        <option value="cf-5+5月棉花">5月棉花</option>
+                        <option value="cf-9+9月棉花">9月棉花</option>
+                    </select> /
+                    <select name="pzbj2" >
+                        <option value="{{ item.pzbj2.0 }}">{{ item.pzbj2.1 }}</option>
+                               <option value="a-1+1月大豆">1月大豆</option>
+                        <option value="a-5+5月大豆">5月大豆</option>
+                        <option value="a-9+9月大豆">9月大豆</option>
+                        <option value="m-1+1月豆粕">1月豆粕</option>
+                        <option value="m-5+5月豆粕">5月豆粕</option>
+                        <option value="m-9+9月豆粕">9月豆粕</option>
+                        <option value="y-1+1月豆油">1月豆油</option>
+                        <option value="y-5+5月豆油">5月豆油</option>
+                        <option value="y-9+9月豆油">9月豆油</option>
+                        <option value="p-1+1月棕榈油">1月棕榈油</option>
+                        <option value="p-5+5月棕榈油">5月棕榈油</option>
+                        <option value="p-9+9月棕榈油">9月棕榈油</option>
+                        <option value="jd-1+1月鸡蛋">1月鸡蛋</option>
+                        <option value="jd-5+5月鸡蛋">5月鸡蛋</option>
+                        <option value="jd-9+9月鸡蛋">9月鸡蛋</option>
+                        <option value="c-1+1月玉米">1月玉米</option>
+                        <option value="c-5+5月玉米">5月玉-米</option>
+                        <option value="c-9+9月玉米">9月玉米</option>
+                        <option value="cs-1+1月玉米淀粉">1月玉米淀粉</option>
+                        <option value="cs-5+5月玉米淀粉">5月玉米淀粉</option>
+                        <option value="cs-9+9月玉米淀粉">9月玉米淀粉</option>
+                        <option value="rs-1+1月菜籽油">1月菜籽油</option>
+                        <option value="rs-5+5月菜籽油">5月菜籽油</option>
+                        <option value="rs-9+9月菜籽油">9月菜籽油</option>
+                        <option value="rm-1+1月菜籽粕">1月菜籽粕</option>
+                        <option value="rm-5+5月菜籽粕">5月菜籽粕</option>
+                        <option value="rm-9+9月菜籽粕">9月菜籽粕</option>
+                        <option value="sr-1+1月白砂糖">1月白砂糖</option>
+                        <option value="sr-5+5月白砂糖">5月白砂糖</option>
+                        <option value="sr-9+9月白砂糖">9月白砂糖</option>
+                        <option value="cf-1+1月棉花">1月棉花</option>
+                        <option value="cf-5+5月棉花">5月棉花</option>
+                        <option value="cf-9+9月棉花">9月棉花</option>
+                    </select>
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                    <input type="submit" value="查询">
+                </td>
+            </form>
+        </tr>
+{#        套利价差#}
+        <tr >
+            <td colspan="4" class="right_border">
+                <div style="width:487px;height:200px;">
+                    <img src="{{ url_for('static',filename='images/youzhi/kpztljc.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                </div>
+            </td>
+            <td colspan="4" >
+                <div style="width:487px;height:200px;">
+                    <img src="{{ url_for('static',filename='images/youzhi/pzbj.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: center">
+                <b style="color: #000000">—— 2019</b>
+                <b style="color: #4169E1">—— 2018</b>
+                <b style="color: #8B4513">—— 2017</b>
+                <b style="color: #5F9EA0">—— 2016</b>
+                <b style="color: #FF7F50">—— 2015</b>
+            </td>
+            <td colspan="4" style="text-align: center">
+                <b style="color: #000000">—— 2019</b>
+                <b style="color: #4169E1">—— 2018</b>
+                <b style="color: #8B4513">—— 2017</b>
+                <b style="color: #5F9EA0">—— 2016</b>
+                <b style="color: #FF7F50">—— 2015</b>
+            </td>
+        </tr>
+{#        产业链追踪#}
+        <tr class="line_hight">
+            <td colspan="8" class="whites" >产业链追踪</td>
+        </tr>
+        <tr class=" font_color">
+            <td colspan="1" rowspan="2">一级指标</td>
+            <td colspan="2" rowspan="2">二级指标</td>
+            <td colspan="1" rowspan="2">今日</td>
+            <td colspan="1" rowspan="2">昨日</td>
+            <td colspan="1" rowspan="2">增减</td>
+            <td colspan="2">同比</td>
+        </tr>
+        <tr class="font_color">
+            <td>数值</td>
+            <td>百分比</td>
+        </tr>
+{#        库存#}
+        <tr class="text_center">
+            <td rowspan="3">库存</td>
+            <td colspan="2">进口大豆港口库存</td>
+            <td>{{ items.kc_data_item.data1.jg }}</td>
+            <td>{{ items.kc_data_item.data1.zr_jg }}</td>
+            <td>{{ items.kc_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">豆油商业库存</td>
+            <td>{{ items.kc_data_item.data2.jg }}</td>
+            <td>{{ items.kc_data_item.data2.zr_jg }}</td>
+            <td>{{ items.kc_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">豆油商业库存</td>
+            <td>{{ items.kc_data_item.data3.jg }}</td>
+            <td>{{ items.kc_data_item.data3.zr_jg }}</td>
+            <td>{{ items.kc_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#        棕榈油压榨利润#}
+        <tr class="text_center">
+            <td rowspan="3">棕榈油进口利润</td>
+            <td colspan="2">国内现货</td>
+            <td>{{ items.yzlr_data_item.data1.jg }}</td>
+            <td>{{ items.yzlr_data_item.data1.zr_jg }}</td>
+            <td>{{ items.yzlr_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">进口成本</td>
+            <td>{{ items.yzlr_data_item.data2.jg }}</td>
+            <td>{{ items.yzlr_data_item.data2.zr_jg }}</td>
+            <td>{{ items.yzlr_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">内外价差</td>
+            <td>{{ items.yzlr_data_item.data3.jg }}</td>
+            <td>{{ items.yzlr_data_item.data3.zr_jg }}</td>
+            <td>{{ items.yzlr_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#        美湾大豆到港成本#}
+        <tr class="text_center">
+            <td colspan="3">美湾大豆到港成本</td>
+            <td>{{ items.dgcb_data_item.data1.jg }}</td>
+            <td>{{ items.dgcb_data_item.data1.zr_jg }}</td>
+            <td>{{ items.dgcb_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#        巴西大豆到港成本#}
+        <tr class="text_center">
+            <td colspan="3">巴西大豆到港成本</td>
+            <td>{{ items.dgcb_data_item.data2.jg }}</td>
+            <td>{{ items.dgcb_data_item.data2.zr_jg }}</td>
+            <td>{{ items.dgcb_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#        升贴水#}
+        <tr class="text_center">
+            <td rowspan="3">升贴水</td>
+            <td colspan="2">美湾</td>
+            <td>{{ items.sts_data_item.data1.jg }}</td>
+            <td>{{ items.sts_data_item.data1.zr_jg }}</td>
+            <td>{{ items.sts_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">美西</td>
+            <td>{{ items.sts_data_item.data2.jg }}</td>
+            <td>{{ items.sts_data_item.data2.zr_jg }}</td>
+            <td>{{ items.sts_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">巴西</td>
+            <td>{{ items.sts_data_item.data3.jg }}</td>
+            <td>{{ items.sts_data_item.data3.zr_jg }}</td>
+            <td>{{ items.sts_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#        image#}
+        <tr >
+            <td colspan="4"  class="right_border">
+                <div style="width:487px;height:200px;">
+                    <img src="../../static/images/youzhi/tljc.jpg" width="100%" height="100%"   alt="">
+                </div>
+            </td>
+            <td colspan="4" >
+                <div style="width:487px;height:200px;">
+                    <img src="../../static/images/youzhi/tljc.jpg" width="100%" height="100%"   alt="">
+                </div>
+            </td>
+        </tr>
+        <tr class="line_hight">
+            <td colspan="8"></td>
+        </tr>
+        <!--表尾-->
+        <tr>
+            <td colspan="1" class="font_color">免责声明</td>
+            <td colspan="7" class="content_left">本报告中的信息均来源于公开资料，我公司对这些信息的准确性和完整性不作任何保证。报告中的内容和意见仅供参考，并不构成对所述品种买卖的出价或征价。我公司及其雇员对使用本报告及其内容所引发的任何直接或间接损失概不负责。本报告仅向特定客户传送，版权归冠通期货所有。未经我公司书面许可，任何机构和个人均不得以任何形式翻版、复制、引用或转载。</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

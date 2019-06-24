@@ -1,0 +1,279 @@
+{% extends 'base.html' %}
+{% block main %}
+    <style>
+    table{border: 2px solid black;background-color: white;margin: 0 auto;width:980px;line-height: 30px;}
+    .content_left{font-size: 14px;text-align: left;text-indent: 2em}
+    .line_hight{background-color: #5b80b2;height: 10px;}
+    .font_color{color: #0C0C0C;font-weight: bold;text-align: center}
+    .text_center{text-align: center}
+    .right_border{border-right: 1px solid black}
+</style>
+<div class="main">
+    <table id="table" border='0'  cellpadding='0' cellspacing='0 ' style="table-layout:fixed;word-wrap:break-word;word-break:break-all;">
+        <!--表头-->
+        <tr class="tableHead">
+            <td rowspan="2" colspan="4" >
+                <img src="../static/images/gtqh.png" alt="" style="width: 100%;height: 100%">
+            </td>
+            <td rowspan="2" colspan="3"></td>
+            <td rowspan="1" colspan="4"  style="font-size: 30px ;font-weight: normal;"class="font_color">
+                <span class="">股指信息速览</span>
+            </td>
+        </tr>
+        <tr class="font_color">
+            <td colspan="3"></td>
+            <td colspan="2">{{ today }}</td>
+        </tr>
+        <tr class="line_hight">
+            <td colspan="12"></td>
+        </tr>
+        <!--新闻板块-->
+        <tr>
+            <td colspan="2" class="font_color">主要新闻</td>
+            <td colspan="10" class="content_left">
+                {% for i in content.content_list %}
+                    <p><span class="layui-badge-dot"></span>{{ i }}</p>
+                {% endfor %}
+            </td>
+        </tr>
+            <!--股指信息与重要指数回顾-->
+        <tr class="line_hight font_color">
+            <td colspan="6">股指信息</td>
+            <td colspan="6">重要指数回顾</td>
+        </tr>
+        <tr class="text_center">
+            <td></td>
+            <td>前日收盘价</td>
+            <td>收盘价</td>
+            <td>涨跌</td>
+            <td>涨跌幅</td>
+            <td class="right_border">成交额(亿)</td>
+            <td></td>
+            <td>前日收盘价</td>
+            <td>收盘价</td>
+            <td>涨跌</td>
+            <td>涨跌幅</td>
+            <td>成交额(亿)</td>
+        </tr>
+        <!--信息1-->
+        <tr class="text_center" >
+            <td>IF1906</td>
+            <td>{{ items.qzxx_data_item.data1.zrjg }}</td>
+            <td>{{ items.qzxx_data_item.data1.jg }}</td>
+            <td>{{ items.qzxx_data_item.data1.zd }}</td>
+            <td>{{ items.qzxx_data_item.data1.zdf }}%</td>
+            <td style="font-size: 12px"  class="right_border">{{ items.qzxx_data_item.data1.cje }}</td>
+            <td>沪深300</td>
+            <td>{{ items.zshg_data_item.data1.zrjg }}</td>
+            <td>{{ items.zshg_data_item.data1.jg }}</td>
+            <td>{{ items.zshg_data_item.data1.zd }}</td>
+            <td>{{ items.zshg_data_item.data1.zdf }}%</td>
+            <td style="font-size: 12px">{{ items.zshg_data_item.data1.cje }}</td>
+        </tr>
+        <!--信息2-->
+        <tr class="text_center">
+            <td>IH1906</td>
+            <td>{{ items.qzxx_data_item.data2.zrjg }}</td>
+            <td>{{ items.qzxx_data_item.data2.jg }}</td>
+            <td>{{ items.qzxx_data_item.data2.zd }}</td>
+            <td>{{ items.qzxx_data_item.data2.zdf }}%</td>
+            <td style="font-size: 12px"  class="right_border">{{ items.qzxx_data_item.data2.cje }}</td>
+            <td>上证50</td>
+            <td>{{ items.zshg_data_item.data2.zrjg }}</td>
+            <td>{{ items.zshg_data_item.data2.jg }}</td>
+            <td>{{ items.zshg_data_item.data2.zd }}</td>
+            <td>{{ items.zshg_data_item.data2.zdf }}%</td>
+            <td style="font-size: 12px">{{ items.zshg_data_item.data2.cje }}</td>
+        </tr>
+        <!--信息3-->
+        <tr class="text_center">
+            <td>IC1906</td>
+            <td>{{ items.qzxx_data_item.data3.zrjg }}</td>
+            <td>{{ items.qzxx_data_item.data3.jg }}</td>
+            <td>{{ items.qzxx_data_item.data3.zd }}</td>
+            <td>{{ items.qzxx_data_item.data3.zdf }}%</td>
+            <td style="font-size: 12px"  class="right_border">{{ items.qzxx_data_item.data3.cje }}</td>
+            <td>中证500</td>
+            <td>{{ items.zshg_data_item.data3.zrjg }}</td>
+            <td>{{ items.zshg_data_item.data3.jg }}</td>
+            <td>{{ items.zshg_data_item.data3.zd }}</td>
+            <td>{{ items.zshg_data_item.data3.zdf }}%</td>
+            <td style="font-size: 12px">{{ items.zshg_data_item.data3.cje }}</td>
+        </tr>
+{# PNG1 #}
+        <tr class="font_color line_hight">
+            <td colspan="6" >期现价差变化</td>
+            <td colspan="6" >跨期价差变化</td>
+        </tr>
+        <tr>
+            <td colspan="6"  class="right_border">
+                <div style="width:487px;height:200px;">
+                    <img src="{{ url_for('static',filename='images/guzhi/qxjc.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                </div>
+            </td>
+            <td colspan="6">
+                <div style="width:487px;height:200px;">
+                    <img src="{{ url_for('static',filename='images/guzhi/kqjc.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                </div>
+            </td>
+        </tr>
+            <tr>
+            <td colspan="6" style="text-align: center" class="right_border">
+                <b style="color: black">—— 沪深300-IF1906</b>
+                <b style="color: red">—— 上证50-IH1906</b>
+                <b style="color: green">—— 中证500-IC1906</b>
+            </td>
+            <td colspan="6" style="text-align: center">
+                <b style="color: black">—— IF1906-IF1909</b>
+                <b style="color: red">—— IH1906-IH1909</b>
+                <b style="color: green">—— IC1906-IC1909(右)</b>
+            </td>
+        </tr>
+{#    endPNG #}
+        <!--前二十持仓-->
+        <tr class="font_color line_hight">
+            <td colspan="6" >前二十净空持仓</td>
+            <td colspan="6" >沪深300净空单</td>
+
+        </tr>
+        <tr class="text_center">
+            <td></td>
+            <td>多仓</td>
+            <td>增减</td>
+            <td>空仓</td>
+            <td>增减</td>
+            <td  class="right_border">净空单</td>
+            <td rowspan="5" colspan="6" >
+                <div style="width:487px;height:200px;">
+                    <img src="{{ url_for('static',filename='images/guzhi/jkd.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                </div>
+            </td>
+        </tr>
+        <!--持仓1-->
+        <tr class="text_center">
+            <td>IF合约</td>
+            <td>{{ items.jkcc_data_item.data1.dc }}</td>
+            <td>{{ items.jkcc_data_item.data1.dc_zj }}</td>
+            <td>{{ items.jkcc_data_item.data1.kc }}</td>
+            <td>{{ items.jkcc_data_item.data1.kc_zj }}</td>
+            <td  class="right_border">{{ items.jkcc_data_item.data1.jkd }}</td>
+        </tr>
+        <!--持仓2-->
+        <tr class="text_center">
+            <td>IH合约</td>
+            <td>{{ items.jkcc_data_item.data2.dc }}</td>
+            <td>{{ items.jkcc_data_item.data2.dc_zj }}</td>
+            <td>{{ items.jkcc_data_item.data2.kc }}</td>
+            <td>{{ items.jkcc_data_item.data2.kc_zj }}</td>
+            <td  class="right_border">{{ items.jkcc_data_item.data2.jkd }}</td>
+        </tr>
+        <!--持仓3-->
+        <tr class="text_center">
+            <td>IC合约</td>
+            <td>{{ items.jkcc_data_item.data3.dc }}</td>
+            <td>{{ items.jkcc_data_item.data3.dc_zj }}</td>
+            <td>{{ items.jkcc_data_item.data3.kc }}</td>
+            <td>{{ items.jkcc_data_item.data3.kc_zj }}</td>
+            <td  class="right_border">{{ items.jkcc_data_item.data3.jkd }}</td>
+        </tr>
+        <!--持仓4-->
+        <tr class="text_center">
+            <td>总计</td>
+            <td>{{ items.jkcc_data_item.data4.dc }}</td>
+            <td>{{ items.jkcc_data_item.data4.dc_zj }}</td>
+            <td>{{ items.jkcc_data_item.data4.kc }}</td>
+            <td>{{ items.jkcc_data_item.data4.kc_zj }}</td>
+            <td  class="right_border">{{ items.jkcc_data_item.data4.jkd }}</td>
+        </tr>
+        <!--热点板块-->
+        <tr class="font_color line_hight">
+            <td colspan="6">强势板块</td>
+            <td colspan="6">弱势板块</td>
+        </tr>
+        <tr class="text_center">
+            <td rowspan="6" colspan="2" class="font_color">股市热点板块</td>
+            <td>名称</td>
+            <td>涨跌幅</td>
+            <td>净流入资金</td>
+            <td>尾盘流入</td>
+            <td class="right_border">开盘流入</td>
+            <td>名称</td>
+            <td>涨跌幅</td>
+            <td>净流入资金</td>
+            <td>尾盘流入</td>
+            <td>开盘流入</td>
+        </tr>
+        <!--热点1-->
+        <tr class="text_center">
+            <td>{{ items.rdbk_data_item.data1.0.0}}</td>
+            <td>{{ items.rdbk_data_item.data1.0.1.0}}</td>
+            <td>{{ items.rdbk_data_item.data1.0.1.1}}</td>
+            <td>{{ items.rdbk_data_item.data1.0.1.2}}</td>
+            <td class="right_border">{{ items.rdbk_data_item.data1.0.1.3}}</td>
+            <td>{{ items.rdbk_data_item.data2.0.0}}</td>
+            <td>{{ items.rdbk_data_item.data2.0.1.0}}</td>
+            <td>{{ items.rdbk_data_item.data2.0.1.1}}</td>
+            <td>{{ items.rdbk_data_item.data2.0.1.2}}</td>
+            <td>{{ items.rdbk_data_item.data2.0.1.3}}</td>
+        </tr>
+        <!--热点2-->
+        <tr class="text_center">
+            <td>{{ items.rdbk_data_item.data1.1.0}}</td>
+            <td>{{ items.rdbk_data_item.data1.1.1.0}}</td>
+            <td>{{ items.rdbk_data_item.data1.1.1.1}}</td>
+            <td>{{ items.rdbk_data_item.data1.1.1.2}}</td>
+            <td class="right_border">{{ items.rdbk_data_item.data1.1.1.3}}</td>
+            <td>{{ items.rdbk_data_item.data2.1.0}}</td>
+            <td>{{ items.rdbk_data_item.data2.1.1.0}}</td>
+            <td>{{ items.rdbk_data_item.data2.1.1.1}}</td>
+            <td>{{ items.rdbk_data_item.data2.1.1.2}}</td>
+            <td>{{ items.rdbk_data_item.data2.1.1.3}}</td>
+        </tr>
+        <!--热点3-->
+        <tr class="text_center">
+            <td>{{ items.rdbk_data_item.data1.2.0}}</td>
+            <td>{{ items.rdbk_data_item.data1.2.1.0}}</td>
+            <td>{{ items.rdbk_data_item.data1.2.1.1}}</td>
+            <td>{{ items.rdbk_data_item.data1.2.1.2}}</td>
+            <td class="right_border">{{ items.rdbk_data_item.data1.2.1.3}}</td>
+            <td>{{ items.rdbk_data_item.data2.2.0}}</td>
+            <td>{{ items.rdbk_data_item.data2.2.1.0}}</td>
+            <td>{{ items.rdbk_data_item.data2.2.1.1}}</td>
+            <td>{{ items.rdbk_data_item.data2.2.1.2}}</td>
+            <td>{{ items.rdbk_data_item.data2.2.1.3}}</td>
+        </tr>
+        <!--热点4-->
+        <tr class="text_center">
+            <td>{{ items.rdbk_data_item.data1.3.0}}</td>
+            <td>{{ items.rdbk_data_item.data1.3.1.0}}</td>
+            <td>{{ items.rdbk_data_item.data1.3.1.1}}</td>
+            <td>{{ items.rdbk_data_item.data1.3.1.2}}</td>
+            <td class="right_border">{{ items.rdbk_data_item.data1.3.1.3}}</td>
+            <td>{{ items.rdbk_data_item.data2.3.0}}</td>
+            <td>{{ items.rdbk_data_item.data2.3.1.0}}</td>
+            <td>{{ items.rdbk_data_item.data2.3.1.1}}</td>
+            <td>{{ items.rdbk_data_item.data2.3.1.2}}</td>
+            <td>{{ items.rdbk_data_item.data2.3.1.3}}</td>
+        </tr>
+        <!--热点5-->
+        <tr class="text_center">
+            <td>{{ items.rdbk_data_item.data1.4.0}}</td>
+            <td>{{ items.rdbk_data_item.data1.4.1.0}}</td>
+            <td>{{ items.rdbk_data_item.data1.4.1.1}}</td>
+            <td>{{ items.rdbk_data_item.data1.4.1.2}}</td>
+            <td class="right_border">{{ items.rdbk_data_item.data1.4.1.3}}</td>
+            <td>{{ items.rdbk_data_item.data2.4.0}}</td>
+            <td>{{ items.rdbk_data_item.data2.4.1.0}}</td>
+            <td>{{ items.rdbk_data_item.data2.4.1.1}}</td>
+            <td>{{ items.rdbk_data_item.data2.4.1.2}}</td>
+            <td>{{ items.rdbk_data_item.data2.4.1.3}}</td>
+        </tr>
+        <tr class="line_hight"><td colspan="12"></td></tr>
+        <!--表尾-->
+        <tr>
+            <td colspan="1" class="font_color">免责声明</td>
+            <td colspan="11" class="content_left">本报告中的信息均来源于公开资料，我公司对这些信息的准确性和完整性不作任何保证。报告中的内容和意见仅供参考，并不构成对所述品种买卖的出价或征价。我公司及其雇员对使用本报告及其内容所引发的任何直接或间接损失概不负责。本报告仅向特定客户传送，版权归冠通期货所有。未经我公司书面许可，任何机构和个人均不得以任何形式翻版、复制、引用或转载。</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

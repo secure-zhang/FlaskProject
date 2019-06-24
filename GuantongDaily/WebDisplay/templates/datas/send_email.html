@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block main %}
+    <style>
+        .main{width:80%;height: 500px;font-size: 26px;margin: 0 auto; overflow: hidden;box-shadow:0px 0px 5px 2px rgba(0, 0, 0, 0.35);}
+        .main a{color: blue}
+        .main_head{height: 10%;width: 80%;margin: 20px auto;text-align: center}
+        .main_cen{height: 60%;width: 60%;margin: 50px auto;position: relative;font-size: 18px}
+        .sub input{width: 80%}
+    </style>
+
+    <div class="main">
+        <div class="main_head ">
+            <blockquote class="layui-elem-quote layui-quote-nm">发送邮件</blockquote>
+        </div>
+        <div class="main_cen">
+                <form action="{{ url_for("send_email") }}" method="post" name="send_email">
+                    {{ form.csrf_token }}
+                <div class="title">标题：{{ form.title(size=50, placeholder="请输入标题...") }}</div>
+                    <br>
+                <div class="name">姓名：{{ session.username }}</div>
+                    <br>
+                <div class="content">内容：{{ form.content(size=100, placeholder="请输入要发送的内容...") }}</div>
+                    <br>
+                <div class="sub">
+                    <input type="submit" class="layui-btn layui-btn-lg" value="点击提交">
+                    <p>{{ get_flashed_messages()[0] }}</p>
+                </div>
+
+                </form>
+        </div>
+        <div class="main_foot"></div>
+    </div>
+{% endblock %}

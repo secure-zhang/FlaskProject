@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block main %}
+    <style>
+        .main{width: 80%;margin: 0px auto;}
+        .main_head{width: 100%;}
+        .main_head img{width: 100%;height: 100%}
+        .main_cen{width: 100%;}
+    </style>
+    <script>
+    layui.use('carousel', function(){
+      var carousel = layui.carousel;
+      //建造实例
+      carousel.render({
+        elem: '#test1'
+        ,width: '100%' //设置容器宽度
+        ,arrow: 'always' //始终显示箭头
+        ,autoplay: 'False' //切换动画方式
+      });
+    });
+    //注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+layui.use('element', function(){
+  var element = layui.element;
+
+  //…
+});
+    </script>
+    <div class="main">
+{#        轮播#}
+        <div class="main_head">
+            <div class="layui-carousel" id="test1">
+              <div carousel-item>
+                <div><img src="../static/images/Banner_03.jpg" alt=""></div>
+                <div><img src="../static/images/Banner_02.jpg" alt=""></div>
+                <div><img src="../static/images/Banner_04.jpg" alt=""></div>
+              </div>
+            </div>
+        </div>
+
+        <hr class="layui-bg-orange">
+
+        <div class="main_cen">
+            <div class="layui-collapse">
+          <div class="layui-colla-item">
+            <h2 class="layui-colla-title">冠通期货</h2>
+            <div class="layui-colla-content layui-show">
+                冠通期货有限公司成立于1996年，是国内历史最悠久的期货公司之一，公司总部设在北京，同时在北京、上海、大连、郑州、秦皇岛、贵阳、南通、柳州、青岛、天津、沈阳、合肥、长沙、成都、武汉、深圳等地设有营业部。公司是上海期货交易所、大连商品交易所、郑州商品交易所和中国金融期货交易所国内四家交易所的结算会员。公司的控股股东是中国中化集团公司成员企业——中国对外经济贸易信托有限公司。
+            </div>
+          </div>
+        <div class="main_foot">
+            <ul class="layui-timeline">
+              <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                  <h3 class="layui-timeline-title">2011-09-14</h3>
+                  <p>
+                    核准期货投资咨询业务资格
+                    <br>核准公司期货投资咨询业务资格，经营范围变更为：商品期货经纪、金融期货经纪、期货投资咨询。
+                    <br>证监许可【2011】1460号
+                  </p>
+                </div>
+              </li>
+                <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                  <h3 class="layui-timeline-title">2011-02-16</h3>
+                  <p>
+                    增加注册资本
+                    <br>公司注册资本由5,850万元变更为10,000万元，三家股东等比例出资，变更后股权比例不变
+                    <br>证监许可【2011】223号
+                  </p>
+                </div>
+              </li>
+              <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                  <h3 class="layui-timeline-title">2010-11-04</h3>
+                  <p>
+                    公司住所变更
+                    <br>公司住所变更为：北京市朝阳区朝阳门外大街甲6号万通中心4座18层。
+                    <br>京证期货发[2010]176号
+                  </p>
+                </div>
+              </li>
+              <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                  <div class="layui-timeline-title">过去</div>
+                </div>
+              </li>
+            </ul>
+        </div>
+        </div>
+                    <hr class="layui-bg-orange">
+        </div>
+    </div>
+{% endblock %}

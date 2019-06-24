@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />#}
+  <title>Gt Futures</title>
+    <link rel="stylesheet" href="../static/layui/css/layui.css">
+    <script src="../static/layui/layui.js"></script>
+    <script src="../static/js/config.js"></script>
+    <style>
+        * { margin: 0; padding: 0 }
+        {#body{background-image: url("../static/images/back.jpg");background-repeat: no-repeat; background-attachment:fixed;}#}
+
+        #warp{width: 100%;height: 100%;background: white;}
+        #header {position: relative;top: 0; width: 100%; z-index: 9999; height: 60px; white-space:nowrap;box-shadow:0px 0px 5px 2px rgba(0, 0, 0, 0.35);background: #393D49;}
+        .logo{position: absolute;width: 20%;height: 100%;line-height: 60px;left: 0px}
+            .logo a{color: #fff;font-size: 25px;margin-left: 30px}
+        .nav{position: absolute;right: 0px;width: 50%}
+            .nav ul li a{color:black;}
+        #center{width: 100%;margin-top: 30px;margin-bottom: 20px;}
+        #footer{width: 100%;height: 150px;background: #555;color: #ccc;padding-top: 30px;margin-top: 30px;}
+        #footer .foot{width: 80%;margin: 0 auto;}
+        #footer .foot .fl{width: 20%;float: left}
+        #footer .foot .fl img{width: 120px;height: 120px;}
+        #footer .foot .fl p{width: 120px;text-align: center;}
+        #footer .foot .fc{width: 33%;float: left;}
+        #footer .foot .fr{width: 33%;float: right;}
+    </style>
+
+</head>
+<body>
+    <div id="warp">
+{#        页首#}
+        <div id="header">
+            <div class="logo" >
+               &nbsp;<a href="/">Gt Futures</a>
+            </div>
+            <div class="nav">
+                <ul class="layui-nav" lay-filter="">
+                    <li class="layui-nav-item"><a href="/">首页</a></li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">日报</a>
+                        <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                            <dd><a href="{{url_for('yuanyou') }}">原油</a></dd>
+                            <dd><a href="{{url_for('jiachun') }}">甲醇</a></dd>
+                            <dd><a href="{{ url_for('guzhi') }}">股指</a></dd>
+                            <dd><a href="{{ url_for('xiangjiao') }}">橡胶</a></dd>
+                            <dd><a href="{{ url_for('shuhua') }}">塑化</a></dd>
+                            <dd><a href="{{ url_for('pta') }}">PTA</a></dd>
+                            <dd><a href="{{ url_for('youzhi') }}">油脂油料</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item "><a href="">新闻</a></li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">数据</a>
+                        <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                            <dd><a href="{{ url_for('cjcc') }}">成交持仓</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href="{{ url_for('send_email') }}">联系管理员</a></li>
+                    <li class="layui-nav-item">
+
+                        {% if session.username %}
+                            <li class="layui-nav-item">
+                                <a href="javascript:;"><i class="layui-icon layui-icon-user" style="color: #eb7350"></i>{{ session.username }}</a>
+                                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                                    <dd><a href="">个人中心</a></dd>
+                                    <dd><a href="{{ url_for('logout') }}">注销</a></dd>
+                                </dl>
+                            </li>
+                            {% else %}
+                            <a href="{{ url_for('login') }}">登录</a>
+                        {% endif %}
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+{#主体内容区域#}
+        <div id="center">
+{#        模板继承#}
+
+            {% block main %}
+
+            {% endblock %}
+        </div>
+{#        页面尾部#}
+        <div id="footer">
+            <div class="foot">
+                    <div class="fl">
+                        <img src="../static/images/vx.png">
+                        <p>我的微信</p>
+                    </div>
+                    <div class="fc">
+                      <h2>本站简介</h2>
+                      <p>仅限内部使用！！！</p>
+                    </div>
+                    <div class="fr">
+                        <h2>网站版权</h2>
+                      <p>未经授权禁止转载、摘编、复制或建立镜像，如有违反，追究法律责任。</p>
+                      <p>举报邮箱：17635035787@163.com</p>
+                      <p>备案号：未备案</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+

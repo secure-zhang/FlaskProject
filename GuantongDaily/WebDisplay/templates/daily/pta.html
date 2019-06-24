@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% block main %}
+    <style>
+        table{border: 2px solid black;background-color: white;margin: 0 auto;width:980px;line-height: 30px;table-layout:fixed;word-wrap:break-word;word-break:break-all;}
+        .font_color{color: #0C0C0C;font-weight: bold;text-align: center}
+        .line_hight{background-color: #5b80b2;height: 10px;}
+        .content_left{font-size: 14px;text-align: left;text-indent: 2em}
+        .text_center{text-align: center}
+        .right_border{border-right: 1px solid black}
+
+    </style>
+    <div class="main">
+        <table id="table" border='0'  cellpadding='0' cellspacing='0 ' style="">
+            <!--表头-->
+            <tr>
+            <td rowspan="2" colspan="3" >
+                <img src="../static/images/gtqh.png" alt="" style="width: 100%;height: 100%">
+            </td>
+            <td rowspan="2" colspan="1"></td>
+            <td rowspan="1" colspan="4"  style="font-size: 30px ;font-weight: normal;"class="font_color">
+                <span class="">PTA信息速览</span>
+            </td>
+            </tr>
+            <tr class="font_color">
+                <td colspan="2"></td>
+                <td colspan="2">{{ today }}</td>
+            </tr>
+            <tr class="line_hight">
+                <td colspan="8"></td>
+            </tr>
+            <!--新闻板块-->
+            <tr>
+                <td colspan="1" class="font_color">主要新闻</td>
+                <td colspan="7" class="content_left">
+                    {% for i in items.content_list %}
+                        <p><span class="layui-badge-dot"></span>{{ i }}。</p>
+                    {% endfor %}
+                </td>
+            </tr>
+
+            {#        期货行情#}
+            <tr class="text_center line_hight">
+                <td colspan="1" ></td>
+                <td colspan="1" >期货合约</td>
+                <td colspan="1" >价格</td>
+                <td colspan="1" >涨跌</td>
+                <td colspan="1" ></td>
+                <td colspan="1" >PTA现货价格</td>
+                <td colspan="2" >涨跌</td>
+            </tr>
+            <tr class="text_center" >
+                <td colspan="1" rowspan="2" class="font_color">期货行情</td>
+                <td>PTA1909</td>
+                <td>{{ items.qhhq_data_item.data1.jg }}</td>
+                <td class="right_border">{{ items.qhhq_data_item.data1.zd }}</td>
+                <td colspan="1"  rowspan="2" class="font_color">现货行情</td>
+                <td rowspan="2">{{ items.xhhq_data_item.data1.jg }}</td>
+                <td rowspan="2" colspan="2">{{ items.xhhq_data_item.data1.zd }}</td>
+            </tr>
+            <tr class="text_center" >
+                <td>PTA2001</td>
+                <td>{{ items.qhhq_data_item.data2.jg }}</td>
+                <td class="right_border">{{ items.qhhq_data_item.data2.zd }}</td>
+            </tr>
+{# IMG1 #}
+            <tr class="line_hight font_color">
+                <td colspan="4">PTA基差</td>
+                <td colspan="4">PTA前20净多单</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="right_border">
+                    <div style="width:487px;height:200px;">
+                        <img src="{{ url_for('static',filename='images/pta/jicha.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                    </div>
+                </td>
+                <td colspan="4" >
+                    <div style="width:487px;height:200px;">
+                        <img src="{{ url_for('static',filename='images/pta/jdd.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center" class="right_border">
+                    <b style="color: black">—— 期货</b>
+                    <b style="color: #CD0000">—— 现货</b>
+                    <b style="color: #7CCD7C">—— 基差(左)</b>
+                </td>
+                <td colspan="4" style="text-align: center">
+                    <b style="color: black">—— 净多单</b>
+                </td>
+            </tr>
+{# ENDIMG1 #}
+
+{# IMG2 #}
+
+            <tr class="line_hight font_color">
+                <td colspan="4">国内PTA库存使用天数</td>
+                <td colspan="4">PTA开工率</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="right_border">
+                    <div style="width:487px;height:200px;">
+                        <img src="{{ url_for('static',filename='images/pta/kc.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                    </div>
+                </td>
+                <td colspan="4" >
+                    <div style="width:487px;height:200px;">
+                        <img src="{{ url_for('static',filename='images/pta/kgl.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center" class="right_border">
+                    <b style="color: #000000">—— 2019</b>
+                    <b style="color: #4169E1">—— 2018</b>
+                    <b style="color: #8B4513">—— 2017</b>
+                    <b style="color: #5F9EA0">—— 2016</b>
+                    <b style="color: #FF7F50">—— 2015</b>
+                </td>
+                <td colspan="4" style="text-align: center">
+                    <b style="color: #000000">—— 2019</b>
+                    <b style="color: #4169E1">—— 2018</b>
+                    <b style="color: #8B4513">—— 2017</b>
+                    <b style="color: #5F9EA0">—— 2016</b>
+                    <b style="color: #FF7F50">—— 2015</b>
+                </td>
+            </tr>
+{# ENDIMG2 #}
+        <tr class="line_hight">
+            <td colspan="8"></td>
+        </tr>
+        <!--表尾-->
+        <tr>
+            <td colspan="1" class="font_color">免责声明</td>
+            <td colspan="7" class="content_left">本报告中的信息均来源于公开资料，我公司对这些信息的准确性和完整性不作任何保证。报告中的内容和意见仅供参考，并不构成对所述品种买卖的出价或征价。我公司及其雇员对使用本报告及其内容所引发的任何直接或间接损失概不负责。本报告仅向特定客户传送，版权归冠通期货所有。未经我公司书面许可，任何机构和个人均不得以任何形式翻版、复制、引用或转载。</td>
+        </tr>
+        </table>
+    </div>
+{% endblock %}
