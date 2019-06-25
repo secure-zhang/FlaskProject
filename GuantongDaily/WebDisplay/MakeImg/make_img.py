@@ -950,10 +950,15 @@ class YouZhi():
         self.yzlr(json_items['yzlr_png_item']['data1'], self.save_path % 'yzlr1')
         self.yzlr(json_items['yzlr_png_item']['data2'], self.save_path % 'yzlr2')
 
-
-
+def main():
+    ShuHua().run()
+    XiangJiao().run()
+    JiaChun().run()
+    GuZhi().run()
+    YouZhi().run()
+    YuanYou().run()
 if __name__ == '__main__':
-    # main()
+    main()
     while True:
         now_time = datetime.datetime.now().strftime('%H%M')
         if now_time > '1640' and now_time <'1800':
