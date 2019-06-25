@@ -178,10 +178,10 @@ class GuZhi():
 
     def main(self):
         w.start()
-        qzxx_data_item = self.qhhq("IF1906.CFE","IH1906.CFE","IC1906.CFE",5)
+        qzxx_data_item = self.qhhq("IF1907.CFE","IH1907.CFE","IC1907.CFE",5)
         zshg_data_item = self.qhhq("000300.SH","000016.SH","000905.SH",5)
-        qxjc_data_item = self.qxjc("000300.SH","IF1906.CFE","000016.SH","IH1906.CFE","000905.SH","IC1906.CFE",100)
-        kcjc_data_item = self.qxjc("IF1906.CFE","IF1909.CFE","IH1906.CFE","IH1909.CFE","IC1906.CFE","IC1909.CFE",100)
+        qxjc_data_item = self.qxjc("000300.SH","IF1907.CFE","000016.SH","IH1907.CFE","000905.SH","IC1907.CFE",100)
+        kcjc_data_item = self.qxjc("IF1907.CFE","IF1909.CFE","IH1907.CFE","IH1909.CFE","IC1907.CFE","IC1909.CFE",100)
 
         jkcc_data_item = self.jkcc()
         jkd_data_item = self.jkd(300)
