@@ -1,6 +1,6 @@
 ﻿
 from WindPy import *
-import pymssql
+import pymysql
 
 import datetime
 import time
@@ -29,17 +29,14 @@ logger.addHandler(stream_handler)
 class WindApi:
     def __init__(self):
         self.startTime = ''
-        self.con = pymssql.connect(
-            server="172.0.10.59",
-            user="gt",
-            password="server123!@#",
-            database="GtData")
+        self.con = pymysql.connect(host="94.191.80.61", user="alazhijia", password="root", db="GuanTongDaily", port=3306,
+                              charset='utf8')
         self.tid_queue=queue.Queue()
         self.data_queue = queue.Queue()
 
     def _readTxt(self):
         '''读取文件获得指标信息'''
-        with open('jbm.txt', 'r', encoding='utf-8') as f:
+        with open('jbm2.txt', 'r', encoding='utf-8') as f:
             file = f.read()
         for i in file.split('\n'):
             if not i :
@@ -48,12 +45,13 @@ class WindApi:
             tid = list1[0].strip()
             # print(tid)
             self.tid_queue.put(tid)
+
     def write_Datas(self, tid,date,value):
         '''写入指标数据'''
         cur = self.con.cursor()
         lock.acquire()
 
-        select_sql = 'select * from TargetDatas where TargetId=%s and Time=%s'
+        select_sql = 'select * from target_datas where tid=%s and date=%s'
         cur.execute(select_sql, (tid, date))
         result = cur.fetchall()
         if result:
@@ -61,16 +59,14 @@ class WindApi:
             logger.info('%s %s Datas existence' % (tid, date))
             return
         try:
-            nowTime = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
-            insertsql = 'insert into TargetDatas (TargetId,Value,Time,UpdateTime,Modified,AddTime) values (%s,%s,%s,%s,%s,%s)'
-            cur.execute(insertsql, (tid, value, date, date, 0, nowTime))
-            self.con.commit()
+            insertsql = 'insert into target_datas (tid,value,date) values (%s,%s,%s)'
+            cur.execute(insertsql, (tid, value, date))
             logger.info('%s %s Datas Success +1' % (tid, date))
         except:
             logger.error('sql server write error ! Date:[%s]'%(date))
         finally:
+            cur.close()
             lock.release()
-
 
     def write_error_bname(self,tid):
         '''记录采集失败'''
@@ -98,8 +94,8 @@ class WindApi:
 
             if not tid:
                 continue
-            start_time = '2010-01-01'
-            # start_time = ''
+            start_time = '2019-06-20'
+            # start_time = self.startTime
             item = self.dataItem(tid,start_time)     # 指标数据
             # print(item)
             if item is None:
@@ -113,7 +109,8 @@ class WindApi:
                 i.start()
             for i in threads:
                 i.join()
-#
+            self.con.commit()
+
         self.con.close()
 #
 class Threads(threading.Thread):
@@ -133,5 +130,10 @@ class Threads(threading.Thread):
 
 if __name__ == '__main__':
     '''抓取历史指标数据'''
-    wa = WindApi()
-    wa.main()
+
+    while True:
+        now_time = datetime.datetime.now().strftime('%H%M')
+        if now_time > '1640' and now_time < '1750':
+            wa = WindApi()
+            wa.main()
+        time.sleep(600)

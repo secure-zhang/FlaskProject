@@ -50,7 +50,7 @@ class YuanYou():
 
     def pzfx(self):
         self.logger.info('正在采集品种分析内容...')
-        url = 'http://www.99qh.com/s/column-list.aspx?tag=XJSCPL&date=%s'%str(self.today)[:10]
+        url = 'http://www.99qh.com/s/column-list.aspx?tag=RLYSCPL&date=%s'%str(self.today)[:10]
         # url = 'http://www.99qh.com/s/column-list.aspx?tag=RLYSCPL&date=%s' % '2019-06-13'
         html = self.pzfx_get_html(url)
         if not html:
@@ -224,7 +224,7 @@ class YuanYou():
         data_item = {'data1': data1,'data2':data2}
         return data_item
 
-    def write_mysql(self, data_items,png_items,content_items):
+    def write_mysql(self, data_items,png_items,content1_items,content2_items):
         con = pymysql.connect(host="94.191.80.61", user="alazhijia", password="root", db="GuanTongDaily", port=3306,
                               charset='utf8')
         cur = con.cursor()
@@ -233,8 +233,8 @@ class YuanYou():
         # cur.execute(drop_sql,str(self.today))
         # con.commit()
         # 添加
-        sql = 'insert into daily_yuanyou (date,data_items,png_items,content_items) values (%s,%s,%s,%s)'
-        cur.execute(sql, (str(self.today)[:10],data_items,png_items,content_items))
+        sql = 'insert into daily_yuanyou (date,data_items,png_items,content1_items,content2_items) values (%s,%s,%s,%s,%s)'
+        cur.execute(sql, (str(self.today)[:10],data_items,png_items,content1_items,content2_items))
         con.commit()
         con.close()
         self.logger.info('原油信息写入成功!')
@@ -252,15 +252,16 @@ class YuanYou():
         kgl_data_item = self.kgl("s5105070")
         kc_data_item = self.kc("s0069597","s5120059",300)
         cc_data_item = self.cc("s0108040","s0108041","s0108044","s0108043",300)
-        data_items = {'content_list': content_list, 'qhhq_data_item': qhhq_data_item, 'xhhq_data_item': xhhq_data_item}
+        data_items = { 'qhhq_data_item': qhhq_data_item, 'xhhq_data_item': xhhq_data_item}
         png_items = {'sc_data_item': sc_data_item, 'wti_data_item': wti_data_item,
                      'brent_data_item': brent_data_item, 'kgl_data_item': kgl_data_item,
                      'kc_data_item': kc_data_item,
                      'cc_data_item': cc_data_item}
         data_items = json.dumps(data_items)
         png_items = json.dumps(png_items)
-        content_items = json.dumps({"content_list":["略"]})
-        self.write_mysql(data_items,png_items,content_items)
+        content1_items = json.dumps({"content_list":content_list})
+        content2_items = json.dumps({"content_list":['略']})
+        self.write_mysql(data_items,png_items,content1_items,content2_items)
 
 
 

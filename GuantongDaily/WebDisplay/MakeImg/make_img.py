@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+import time
+
+import datetime
+
 from config import logger,SelectDatas
 
 import json,os
@@ -11,12 +15,11 @@ plt.style.use('seaborn-dark')
 # 设置中文编码和负号的正常显示
 plt.rcParams['font.sans-serif'] = [u'SimHei']
 plt.rcParams['axes.unicode_minus'] = False
-
-class Shuhua():
+class ShuHua():
     # 存储路径
     def __init__(self):
         self.save_path = r'../static/images/shuhua/%s'
-        self.dir_name = '../static/images/shuhua/'
+        self.dir_name = r'../static/images/shuhua/'
 
     def is_save_dir(self):
         # 判断是否存在文件夹
@@ -66,9 +69,9 @@ class Shuhua():
         # 共享x轴，生成次坐标轴
         ax_sub = ax.twinx()
         # 绘图
-        ax.plot(date_list, data_list1, color='black', linewidth=1, label='期货')
-        ax.plot(date_list, data_list2, color='#CD0000', linewidth=1, label='现货')
-        ax_sub.bar(date_list, data_list3, linewidth=0.1, color='#7CCD7C', label='基差')
+        ax_sub.plot(date_list, data_list1, color='black', linewidth=1, label='期货')
+        ax_sub.plot(date_list, data_list2, color='#CD0000', linewidth=1, label='现货')
+        ax.bar(date_list, data_list3, linewidth=0.1, color='#7CCD7C', label='基差')
 
         # 获取图的坐标信息
         ax = plt.gca()
@@ -147,7 +150,7 @@ class Shuhua():
         # 为了避免x轴日期刻度标签的重叠，设置x轴刻度自动展现，并且45度倾斜
         plt.tick_params(labelsize=20)
         fig.autofmt_xdate(rotation=45)
-        # plt.legend(fontsize=20, loc='upper right')
+        plt.legend(fontsize=20, loc='upper right')
         # 显示图形
         plt.savefig(png_path_name,dpi=300)
 
@@ -169,8 +172,7 @@ class Shuhua():
         self.jiacha(json_items['jiacha_data_item'])
         #except:
         #    logger.error('SHUHUA ERROR')
-
-class Xiangjiao():
+class XiangJiao():
     # 存储路径
     def __init__(self):
         self.save_path = r'../static/images/xiangjiao/%s'
@@ -236,7 +238,7 @@ class Xiangjiao():
         # 为了避免x轴日期刻度标签的重叠，设置x轴刻度自动展现，并且45度倾斜
         plt.tick_params(labelsize=20)
         fig.autofmt_xdate(rotation=45)
-        # plt.legend(fontsize=20, loc='upper right')
+        plt.legend(fontsize=20, loc='upper right')
         # 显示图形
         plt.savefig(png_path_name,dpi=300)
 
@@ -251,9 +253,9 @@ class Xiangjiao():
         # 共享x轴，生成次坐标轴
         ax_sub = ax.twinx()
         # 绘图
-        ax.plot(date_list, data_list1, color='black', linewidth=1.5, label='期货')
-        ax.plot(date_list, data_list2, color='#CD0000', linewidth=1.5, label='现货')
-        ax_sub.bar(date_list, data_list3, linewidth=0.5, color='#7CCD7C', label='基差')
+        ax_sub.plot(date_list, data_list1, color='black', linewidth=1, label='期货')
+        ax_sub.plot(date_list, data_list2, color='#CD0000', linewidth=1, label='现货')
+        ax.bar(date_list, data_list3, linewidth=0.5, color='#7CCD7C', label='基差')
 
         # 获取图的坐标信息
         ax = plt.gca()
@@ -311,7 +313,7 @@ class Xiangjiao():
         ax.plot(date_list, data_list1, color='#6495ED', linewidth=1)
         ax.plot(date_list, data_list2, color='#228B22', linewidth=1)
         ax.plot(date_list, data_list3, color='#CD0000', linewidth=1)
-        ax_sub.plot(date_list, data_list4, color='#7CCD7C', linewidth=1)
+        ax_sub.plot(date_list, data_list4, color='black', linewidth=1)
 
         # 获取图的坐标信息
         ax = plt.gca()
@@ -350,8 +352,7 @@ class Xiangjiao():
             self.wpqh(param,self.save_path % 'wpqh')
         except:
            logger.error('XIANGJIAO ERROR')
-
-class Jiachun():
+class JiaChun():
     # 存储路径
     def __init__(self):
         self.save_path = r'../static/images/jiachun/%s'
@@ -373,9 +374,9 @@ class Jiachun():
         # 共享x轴，生成次坐标轴
         ax_sub = ax.twinx()
         # 绘图
-        ax_sub.bar(date_list, data_list3, linewidth=0.5, color='#7CCD7C', label='基差')
-        ax.plot(date_list, data_list1, color='black', linewidth=1, label='期货')
-        ax.plot(date_list, data_list2, color='#CD0000', linewidth=1, label='现货')
+        ax_sub.plot(date_list, data_list1, color='black', linewidth=1, label='期货')
+        ax_sub.plot(date_list, data_list2, color='#CD0000', linewidth=1, label='现货')
+        ax.bar(date_list, data_list3, linewidth=0.5, color='#7CCD7C', label='基差')
 
         # 获取图的坐标信息
         ax = plt.gca()
@@ -504,7 +505,6 @@ class Jiachun():
         # 为了避免x轴日期刻度标签的重叠，设置x轴刻度自动展现，并且45度倾斜
         plt.tick_params(labelsize=20)
         fig.autofmt_xdate(rotation=45)
-        # plt.legend(fontsize=20, loc='upper right')
         # 显示图形
         plt.savefig(png_path_name,dpi=300)
 
@@ -527,7 +527,7 @@ class Jiachun():
         jdd_data_item = json_items['jdd_data_item']
         self.jdd(jdd_data_item['data1'], self.save_path % 'jdd')
 
-        # 现货图
+        # 库存图
         xhkc_item = json_items['xhkc_data_item']
         self.xh(xhkc_item, self.save_path % 'xhkc')
 
@@ -538,7 +538,6 @@ class Jiachun():
         # # 进口利润
         jklr_data_item = json_items['jklr_data_item']
         self.jicha(jklr_data_item['data1'], self.save_path % 'jklr')
-
 class GuZhi():
     # 存储路径
     def __init__(self):
@@ -561,7 +560,7 @@ class GuZhi():
         plt.plot(date_list[::-1],  # x轴数据
                  data_list[::-1],  # y轴数据
                  linestyle='-',  # 折线类型
-                 linewidth=2,  # 折线宽度
+                 linewidth=1.5,  # 折线宽度
                  color='black',  # 折线颜色
                  )
 
@@ -576,7 +575,7 @@ class GuZhi():
         fig.autofmt_xdate(rotation=45)
 
         # 显示图形
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name)
 
 
 
@@ -599,21 +598,21 @@ class GuZhi():
         plt.plot(date_list1,  # x轴数据
                  data_list1,  # y轴数据
                  linestyle='-',  # 折线类型
-                 linewidth=2,  # 折线宽度
-                 color='blue',  # 折线颜色
+                 linewidth=1.5,  # 折线宽度
+                 color='black',  # 折线颜色
                  )
         # 绘图
         plt.plot(date_list2,  # x轴数据
                  data_list2,  # y轴数据
                  linestyle='-',  # 折线类型
-                 linewidth=2,  # 折线宽度
+                 linewidth=1.5,  # 折线宽度
                  color='red',  # 折线颜色
                  )
         # 绘图
         plt.plot(date_list3,  # x轴数据
                  data_list3,  # y轴数据
                  linestyle='-',  # 折线类型
-                 linewidth=2,  # 折线宽度
+                 linewidth=1,  # 折线宽度
                  color='green',  # 折线颜色
                  )
         # 获取图的坐标信息
@@ -627,7 +626,7 @@ class GuZhi():
         fig.autofmt_xdate(rotation=45)
 
         # 显示图形
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name)
 
     def kcjc(self, param,png_path_name):
         data1 = param['data1']
@@ -649,21 +648,21 @@ class GuZhi():
         ax.plot(date_list1,  # x轴数据
                  data_list1,  # y轴数据
                  linestyle='-',  # 折线类型
-                 linewidth=2,  # 折线宽度
-                 color='blue',  # 折线颜色
+                 linewidth=1,  # 折线宽度
+                 color='black',  # 折线颜色
                  )
         # 绘图
         ax.plot(date_list2,  # x轴数据
                  data_list2,  # y轴数据
                  linestyle='-',  # 折线类型
-                 linewidth=2,  # 折线宽度
+                 linewidth=1,  # 折线宽度
                  color='red',  # 折线颜色
                  )
         # 绘图
         ax_sub.plot(date_list3,  # x轴数据
                  data_list3,  # y轴数据
                  linestyle='-',  # 折线类型
-                 linewidth=2,  # 折线宽度
+                 linewidth=1,  # 折线宽度
                  color='green',  # 折线颜色
                  )
 
@@ -679,7 +678,7 @@ class GuZhi():
         fig.autofmt_xdate(rotation=45)
 
         # 显示图形
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name)
 
     def run(self):
         logger.info('MAKEING GUZHI PNG...')
@@ -697,7 +696,6 @@ class GuZhi():
 
         kcjc_data_item = json_items['kcjc_data_item']
         self.kcjc(kcjc_data_item,self.save_path %'kqjc')
-
 class YuanYou():
     # 存储路径
     def __init__(self):
@@ -719,9 +717,9 @@ class YuanYou():
         # 共享x轴，生成次坐标轴
         ax_sub = ax.twinx()
         # 绘图
-        ax.plot(date_list, data_list1, color='black', linewidth=1, label='期货')
-        ax.plot(date_list, data_list2, color='#CD0000', linewidth=1, label='现货')
-        ax_sub.bar(date_list, data_list3, linewidth=0.5, color='#7CCD7C', label='基差')
+        ax_sub.plot(date_list, data_list1, color='black', linewidth=1, label='期货')
+        ax_sub.plot(date_list, data_list2, color='#CD0000', linewidth=1, label='现货')
+        ax.bar(date_list, data_list3, linewidth=0.5, color='#7CCD7C', label='基差')
 
         # 获取图的坐标信息
         ax = plt.gca()
@@ -873,27 +871,101 @@ class YuanYou():
         # 持仓
         cc_data_item = json_items['cc_data_item']
         self.cc(cc_data_item, self.save_path % 'cc')
+class YouZhi():
+    # 存储路径
+    def __init__(self):
+        self.save_path = r'../static/images/youzhi/%s'
+        self.dir_name = '../static/images/youzhi/'
 
-def main():
-    sh = Shuhua()
-    sh.run()
-    xj = Xiangjiao()
-    xj.run()
-    jc = Jiachun()
-    jc.run()
-    gz = GuZhi()
-    gz.run()
-    yy = YuanYou()
-    yy.run()
+    def is_save_dir(self):
+        # 判断是否存在文件夹
+        if not os.path.exists(self.dir_name):
+            os.mkdir(r'%s' % (self.dir_name))
+
+
+    def yzlr(self,param,png_path_name):
+        date = param['date']
+
+        data_list15 = [i[1] for i in param['data_list15']]
+        data_list16 = [i[1] for i in param['data_list16']]
+        data_list17 = [i[1] for i in param['data_list17']]
+        data_list18 = [i[1] for i in param['data_list18']]
+        data_list19 = [i[1] for i in param['data_list19']]
+        # 设置图框的大小
+        fig = plt.figure(figsize=(10, 6))
+        # 绘图
+        plt.plot(date[:len(data_list15)],  # x轴数据
+                 data_list15,  # y轴数据
+                 linestyle='-',  # 折线类型
+                 linewidth=2,  # 折线宽度
+                 color='#FF7F50',  # 折线颜色
+                 label='2015')  # 点的填充色
+
+        plt.plot(date[:len(data_list16)],  # x轴数据
+                 data_list16,  # y轴数据
+                 linestyle='-',  # 折线类型
+                 linewidth=2,  # 折线宽度
+                 color='#5F9EA0',  # 折线颜色
+                 label='2016')  #
+
+        plt.plot(date[:len(data_list17)],  # x轴数据
+                 data_list17,  # y轴数据
+                 linestyle='-',  # 折线类型
+                 linewidth=2,  # 折线宽度
+                 color='#8B4513',  # 折线颜色
+                 label='2017')
+
+        plt.plot(date[:len(data_list18)],  # x轴数据
+                 data_list18,  # y轴数据
+                 linestyle='-',  # 折线类型
+                 linewidth=2,  # 折线宽度
+                 color='#4169E1',  # 折线颜色
+                 label='2018')
+
+        plt.plot(date[:len(data_list19)],  # x轴数据
+                 data_list19,  # y轴数据
+                 linestyle='-',  # 折线类型
+                 linewidth=3,  # 折线宽度
+                 color='#000000',  # 折线颜色
+                 label='2019')
+        # 获取图的坐标信息
+        ax = plt.gca()
+
+        # 设置x轴显示多少个日期刻度
+        xlocator = mpl.ticker.LinearLocator(10)
+        ax.xaxis.set_major_locator(xlocator)
+
+        # 为了避免x轴日期刻度标签的重叠，设置x轴刻度自动展现，并且45度倾斜
+        plt.tick_params(labelsize=20)
+        fig.autofmt_xdate(rotation=45)
+        # 显示图形
+        plt.savefig(png_path_name)
+
+    def run(self):
+        logger.info('MAKEING YOUZHI PNG...')
+        self.is_save_dir()
+        S = SelectDatas()
+        json_items = S.select_data('png_items', 'daily_youzhi')
+        json_items = json.loads(json_items)
+        self.yzlr(json_items['yzlr_png_item']['data1'], self.save_path % 'yzlr1')
+        self.yzlr(json_items['yzlr_png_item']['data2'], self.save_path % 'yzlr2')
+
+
 
 if __name__ == '__main__':
-    main()
-    # while True:
-    #     now_time = datetime.datetime.now().strftime('%H%M')
-    #     if now_time > '1640' and now_time <'1800':
-    #         logger.info('%s Start ...'%now_time)
-    #         main()
-    #     time.sleep(600)
+    # main()
+    while True:
+        now_time = datetime.datetime.now().strftime('%H%M')
+        if now_time > '1640' and now_time <'1800':
+            logger.info('%s Start ...'%now_time)
+            ShuHua().run()
+            XiangJiao().run()
+            JiaChun().run()
+            GuZhi().run()
+            YouZhi().run()
+        if now_time > '0830' and now_time <'0850':
+            YuanYou().run()
+        time.sleep(600)
 
 
 

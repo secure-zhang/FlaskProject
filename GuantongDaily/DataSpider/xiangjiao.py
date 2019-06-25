@@ -198,7 +198,8 @@ class XiangJiao():
         data_item = {'data1':data1,'data2':data2,'data3':data3,'data4':data4,'date':date}
         return data_item
 
-    def write_mysql(self, data_items,png_items):
+
+    def write_mysql(self, data_items,png_items,content_items):
         con = pymysql.connect(host="94.191.80.61", user="alazhijia", password="root", db="GuanTongDaily", port=3306,
                               charset='utf8')
         cur = con.cursor()
@@ -207,8 +208,8 @@ class XiangJiao():
         # cur.execute(drop_sql,str(self.today))
         # con.commit()
         # 添加
-        sql = 'insert into daily_xiangjiao (date,data_items,png_items) values (%s,%s,%s)'
-        cur.execute(sql, (str(self.today)[:10],data_items,png_items))
+        sql = 'insert into daily_xiangjiao (date,data_items,png_items,content_items) values (%s,%s,%s,%s)'
+        cur.execute(sql, (str(self.today)[:10], data_items, png_items, content_items))
         con.commit()
         con.close()
         self.logger.info('橡胶信息写入成功!')
@@ -224,11 +225,12 @@ class XiangJiao():
         xhjg_data_item = self.xhjg("s5016816")
         xhkc_data_item = self.xhjg("s0163835")
         wpqh_data_item = self.wpqh("s5016922","s5016926","s5016928","m0066359",300)
-        data_items = {'content_list':content_list,'qhhq_data_item':qhhq_data_item,'xhhq_data_item':xhhq_data_item}
+        data_items = {'qhhq_data_item':qhhq_data_item,'xhhq_data_item':xhhq_data_item}
         png_items = {'jicha_data_item':jicha_data_item,'jdd_data_item':jdd_data_item,'xhjg_data_item':xhjg_data_item,'xhkc_data_item':xhkc_data_item,'wpqh_data_item':wpqh_data_item}
         data_items = json.dumps(data_items)
         png_items = json.dumps(png_items)
-        self.write_mysql(data_items,png_items)
+        content_items = json.dumps({"content_list":content_list})
+        self.write_mysql(data_items,png_items,content_items)
 
 
 if __name__ == '__main__':

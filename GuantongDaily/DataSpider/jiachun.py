@@ -49,7 +49,7 @@ class JiaChun():
     def pzfx(self):
         self.logger.info('正在采集品种分析内容...')
         url = 'http://www.99qh.com/s/column-list.aspx?tag=CLSCPL&date=%s'%str(self.today)[:10]
-        # url = 'http://www.99qh.com/s/column-list.aspx?tag=CLSCPL&date=%s'%'2019-06-05'
+        # url = 'http://www.99qh.com/s/column-list.aspx?tag=CLSCPL&date=%s'%'2019-06-24'
         html = self.pzfx_get_html(url)
         if not html:
             self.logger.error('未获取页面')
@@ -252,7 +252,7 @@ class JiaChun():
         date = wData.Times
         return dict(zip(date,data))
 
-    def write_mysql(self, data_items,png_items):
+    def write_mysql(self, data_items,png_items,content_items):
         con = pymysql.connect(host="94.191.80.61", user="alazhijia", password="root", db="GuanTongDaily", port=3306,
                               charset='utf8')
         cur = con.cursor()
@@ -261,8 +261,8 @@ class JiaChun():
         # cur.execute(drop_sql,str(self.today))
         # con.commit()
         # 添加
-        sql = 'insert into daily_jiachun (date,data_items,png_items) values (%s,%s,%s)'
-        cur.execute(sql, (str(self.today)[:10],data_items,png_items))
+        sql = 'insert into daily_jiachun (date,data_items,png_items,content_items) values (%s,%s,%s,%s)'
+        cur.execute(sql, (str(self.today)[:10],data_items,png_items,content_items))
         con.commit()
         con.close()
         self.logger.info('甲醇信息写入成功!')
@@ -280,13 +280,12 @@ class JiaChun():
         pplr_data_item = self.pplr("S0167475","s0203118",600)
         jklr_data_item = self.jklr("s5422062","s5416976",'USDCNY.IB',600)
 
-        data_items = {'content_list':content_list,'qhhq_data_item':qhhq_data_item,'xhhq_data_item':xhhq_data_item}
+        data_items = {'qhhq_data_item':qhhq_data_item,'xhhq_data_item':xhhq_data_item}
         png_items = {'jicha_data_item':jicha_data_item,'jiacha_data_item':jiacha_data_item,'jdd_data_item':jdd_data_item,'xhkc_data_item':xhkc_data_item,'pplr_data_item':pplr_data_item,'jklr_data_item':jklr_data_item}
         data_items = json.dumps(data_items)
         png_items = json.dumps(png_items)
-        self.write_mysql(data_items,png_items)
-
-
+        content_items = json.dumps({"content_list":content_list})
+        self.write_mysql(data_items,png_items,content_items)
 
 if __name__ == '__main__':
     jc = JiaChun()

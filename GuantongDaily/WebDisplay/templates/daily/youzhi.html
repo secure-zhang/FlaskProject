@@ -7,31 +7,32 @@
     .font_color{text-align: center;color: #0C0C0C;font-weight: bold;}
     .whites{font-size: 20px;text-align: center;color: white;font-weight: bold}
     .text_center{text-align: center}
-    .right_border{border-right: 1px solid black}
+    .border_none td{border: none}
 </style>
 <div class="main">
     <table id="table" border='1'  cellpadding='0' cellspacing='0 ' style="table-layout:fixed;word-wrap:break-word;word-break:break-all;">
         <!--表头-->
-        <tr class="tableHead" >
-            <td rowspan="2" colspan="3"  style="border: none">
+        <tr class="tableHead border_none" >
+            <td rowspan="2" colspan="3"  >
                 <img src="../../static/images/gtqh.png" alt="" style="width: 100%;height: 100%">
             </td>
-            <td rowspan="2" colspan="1" style="border: none"></td>
-            <td rowspan="1" colspan="4"  style="font-size: 30px ;font-weight: normal;border: none" class="font_color">
+            <td rowspan="2" colspan="1" ></td>
+            <td rowspan="1" colspan="4"  style="font-size: 30px ;font-weight: normal;" class="font_color">
                 <span class="">油脂油料信息速览</span>
             </td>
         </tr>
-        <tr class="font_color" >
-            <td colspan="2" style="border: none"></td>
-            <td colspan="2" style="border: none">{{ today }}</td>
+        <tr class="font_color border_none" >
+            <td colspan="2" ></td>
+            <td colspan="2" >{{ today }}</td>
         </tr>
         <tr class="line_hight">
             <td colspan="8" class="whites" >市场观点</td>
         </tr>
         <tr class="content_left" style="text-indent:2em;">
-            <td colspan="1" class="font_color">国产豆方面</td>
-            <td colspan="7">
-                <p>    各地余粮基本见底，市场供需格局偏紧，贸易商销售心态得到提振，报价仍有上涨，利好国产大豆市场行情。不过，下游对南方高价接受度不高，且大豆种植面积增加，后期大豆产量或将增加，一定程度上抑制了大豆涨幅。总体来看，短线国产大豆行情或仍有上涨的可能。</p>
+            <td colspan="8">
+                {% for i in content.content_list %}
+                    <p><span class="layui-badge-dot"></span>{{ i }}</p>
+                {% endfor %}
             </td>
         </tr>
 
@@ -360,7 +361,7 @@
                     </select> /
                     <select name="pzbj2" >
                         <option value="{{ item.pzbj2.0 }}">{{ item.pzbj2.1 }}</option>
-                               <option value="a-1+1月大豆">1月大豆</option>
+                        <option value="a-1+1月大豆">1月大豆</option>
                         <option value="a-5+5月大豆">5月大豆</option>
                         <option value="a-9+9月大豆">9月大豆</option>
                         <option value="m-1+1月豆粕">1月豆粕</option>
@@ -544,12 +545,12 @@
         <tr >
             <td colspan="4"  class="right_border">
                 <div style="width:487px;height:200px;">
-                    <img src="../../static/images/youzhi/tljc.jpg" width="100%" height="100%"   alt="">
+                    <img src="{{ url_for('static',filename='images/youzhi/yzlr1.png',_t=val1) }}" width="100%" height="100%"   alt="">
                 </div>
             </td>
             <td colspan="4" >
                 <div style="width:487px;height:200px;">
-                    <img src="../../static/images/youzhi/tljc.jpg" width="100%" height="100%"   alt="">
+                    <img src="{{ url_for('static',filename='images/youzhi/yzlr2.png',_t=val1) }}" width="100%" height="100%"   alt="">
                 </div>
             </td>
         </tr>

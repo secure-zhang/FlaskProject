@@ -30,6 +30,8 @@
                 </p>
                 <div class="form">
                     <form action="{{ url_for("login") }}" method="post" name="login">
+                                    {{ form.csrf_token }}
+
                         <p><i class="layui-icon layui-icon-username" style="font-size: 20px; color: #1E9FFF;"></i>
                             {{ form.email(size=40) }}
                         </p>

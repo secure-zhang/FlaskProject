@@ -6,12 +6,13 @@
     .line_hight{background-color: #5b80b2;height: 10px;}
     .font_color{color: #0C0C0C;font-weight: bold;text-align: center}
     .text_center{text-align: center}
-    .right_border{border-right: 1px solid black}
+            .border_none td{border: none}
+
 </style>
 <div class="main">
-    <table id="table" border='0'  cellpadding='0' cellspacing='0 ' style="table-layout:fixed;word-wrap:break-word;word-break:break-all;">
+    <table id="table" border='1'  cellpadding='0' cellspacing='0 ' style="table-layout:fixed;word-wrap:break-word;word-break:break-all;">
         <!--表头-->
-        <tr class="tableHead">
+        <tr class="tableHead border_none">
             <td rowspan="2" colspan="3" >
                 <img src="../../static/images/gtqh.png" alt="" style="width: 100%;height: 100%">
             </td>
@@ -20,7 +21,7 @@
                 <span class="">甲醇信息速览</span>
             </td>
         </tr>
-        <tr class="font_color">
+        <tr class="font_color border_none">
             <td colspan="2"></td>
             <td colspan="2">{{ today }}</td>
         </tr>
@@ -31,7 +32,7 @@
         <tr>
             <td colspan="1" class="font_color">品种分析</td>
             <td colspan="7" class="content_left">
-                {% for i in items.content_list %}
+                {% for i in content.content_list %}
                     <p><span class="layui-badge-dot"></span>{{ i }}。</p>
                 {% endfor %}
             </td>

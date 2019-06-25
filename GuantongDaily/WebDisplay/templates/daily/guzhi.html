@@ -6,12 +6,13 @@
     .line_hight{background-color: #5b80b2;height: 10px;}
     .font_color{color: #0C0C0C;font-weight: bold;text-align: center}
     .text_center{text-align: center}
-    .right_border{border-right: 1px solid black}
+            .border_none td{border: none}
+
 </style>
 <div class="main">
-    <table id="table" border='0'  cellpadding='0' cellspacing='0 ' style="table-layout:fixed;word-wrap:break-word;word-break:break-all;">
+    <table id="table" border='1'  cellpadding='0' cellspacing='0 ' style="table-layout:fixed;word-wrap:break-word;word-break:break-all;">
         <!--表头-->
-        <tr class="tableHead">
+        <tr class="tableHead border_none">
             <td rowspan="2" colspan="4" >
                 <img src="../static/images/gtqh.png" alt="" style="width: 100%;height: 100%">
             </td>
@@ -20,7 +21,7 @@
                 <span class="">股指信息速览</span>
             </td>
         </tr>
-        <tr class="font_color">
+        <tr class="font_color border_none">
             <td colspan="3"></td>
             <td colspan="2">{{ today }}</td>
         </tr>
@@ -206,67 +207,67 @@
         <!--热点1-->
         <tr class="text_center">
             <td>{{ items.rdbk_data_item.data1.0.0}}</td>
-            <td>{{ items.rdbk_data_item.data1.0.1.0}}</td>
-            <td>{{ items.rdbk_data_item.data1.0.1.1}}</td>
-            <td>{{ items.rdbk_data_item.data1.0.1.2}}</td>
-            <td class="right_border">{{ items.rdbk_data_item.data1.0.1.3}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.0.1.0}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.0.1.1}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.0.1.2}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.0.1.3}}</td>
             <td>{{ items.rdbk_data_item.data2.0.0}}</td>
-            <td>{{ items.rdbk_data_item.data2.0.1.0}}</td>
-            <td>{{ items.rdbk_data_item.data2.0.1.1}}</td>
-            <td>{{ items.rdbk_data_item.data2.0.1.2}}</td>
-            <td>{{ items.rdbk_data_item.data2.0.1.3}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.0.1.0}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.0.1.1}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.0.1.2}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.0.1.3}}</td>
         </tr>
         <!--热点2-->
         <tr class="text_center">
             <td>{{ items.rdbk_data_item.data1.1.0}}</td>
-            <td>{{ items.rdbk_data_item.data1.1.1.0}}</td>
-            <td>{{ items.rdbk_data_item.data1.1.1.1}}</td>
-            <td>{{ items.rdbk_data_item.data1.1.1.2}}</td>
-            <td class="right_border">{{ items.rdbk_data_item.data1.1.1.3}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.1.1.0}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.1.1.1}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.1.1.2}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.1.1.3}}</td>
             <td>{{ items.rdbk_data_item.data2.1.0}}</td>
-            <td>{{ items.rdbk_data_item.data2.1.1.0}}</td>
-            <td>{{ items.rdbk_data_item.data2.1.1.1}}</td>
-            <td>{{ items.rdbk_data_item.data2.1.1.2}}</td>
-            <td>{{ items.rdbk_data_item.data2.1.1.3}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.1.1.0}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.1.1.1}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.1.1.2}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.1.1.3}}</td>
         </tr>
         <!--热点3-->
         <tr class="text_center">
             <td>{{ items.rdbk_data_item.data1.2.0}}</td>
-            <td>{{ items.rdbk_data_item.data1.2.1.0}}</td>
-            <td>{{ items.rdbk_data_item.data1.2.1.1}}</td>
-            <td>{{ items.rdbk_data_item.data1.2.1.2}}</td>
-            <td class="right_border">{{ items.rdbk_data_item.data1.2.1.3}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.2.1.0}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.2.1.1}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.2.1.2}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.2.1.3}}</td>
             <td>{{ items.rdbk_data_item.data2.2.0}}</td>
-            <td>{{ items.rdbk_data_item.data2.2.1.0}}</td>
-            <td>{{ items.rdbk_data_item.data2.2.1.1}}</td>
-            <td>{{ items.rdbk_data_item.data2.2.1.2}}</td>
-            <td>{{ items.rdbk_data_item.data2.2.1.3}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.2.1.0}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.2.1.1}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.2.1.2}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.2.1.3}}</td>
         </tr>
         <!--热点4-->
         <tr class="text_center">
             <td>{{ items.rdbk_data_item.data1.3.0}}</td>
-            <td>{{ items.rdbk_data_item.data1.3.1.0}}</td>
-            <td>{{ items.rdbk_data_item.data1.3.1.1}}</td>
-            <td>{{ items.rdbk_data_item.data1.3.1.2}}</td>
-            <td class="right_border">{{ items.rdbk_data_item.data1.3.1.3}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.3.1.0}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.3.1.1}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.3.1.2}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.3.1.3}}</td>
             <td>{{ items.rdbk_data_item.data2.3.0}}</td>
-            <td>{{ items.rdbk_data_item.data2.3.1.0}}</td>
-            <td>{{ items.rdbk_data_item.data2.3.1.1}}</td>
-            <td>{{ items.rdbk_data_item.data2.3.1.2}}</td>
-            <td>{{ items.rdbk_data_item.data2.3.1.3}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.3.1.0}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.3.1.1}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.3.1.2}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.3.1.3}}</td>
         </tr>
         <!--热点5-->
         <tr class="text_center">
             <td>{{ items.rdbk_data_item.data1.4.0}}</td>
-            <td>{{ items.rdbk_data_item.data1.4.1.0}}</td>
-            <td>{{ items.rdbk_data_item.data1.4.1.1}}</td>
-            <td>{{ items.rdbk_data_item.data1.4.1.2}}</td>
-            <td class="right_border">{{ items.rdbk_data_item.data1.4.1.3}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.4.1.0}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.4.1.1}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.4.1.2}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data1.4.1.3}}</td>
             <td>{{ items.rdbk_data_item.data2.4.0}}</td>
-            <td>{{ items.rdbk_data_item.data2.4.1.0}}</td>
-            <td>{{ items.rdbk_data_item.data2.4.1.1}}</td>
-            <td>{{ items.rdbk_data_item.data2.4.1.2}}</td>
-            <td>{{ items.rdbk_data_item.data2.4.1.3}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.4.1.0}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.4.1.1}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.4.1.2}}</td>
+            <td class="rdbk_td">{{ items.rdbk_data_item.data2.4.1.3}}</td>
         </tr>
         <tr class="line_hight"><td colspan="12"></td></tr>
         <!--表尾-->
@@ -276,4 +277,19 @@
         </tr>
     </table>
 </div>
+
+<script type="text/javascript">
+//记得放到最后，因为必须等表格呈现之后才可以改变样式颜色
+    td_list = document.getElementsByClassName('rdbk_td'); //获取集合
+    for (i = 0; i < td_list.length; i++) {//遍历
+        if (td_list[i].textContent <= 0) {//判断是否大于0
+            td_list[i].style.backgroundColor = "#DDA0DD";//小于等于0变成红色
+        } else {
+            td_list[i].style.backgroundColor = "#C1FFC1";//否则变成绿色
+        }
+    }
+</script>
+
+
+
 {% endblock %}

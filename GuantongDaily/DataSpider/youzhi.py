@@ -174,7 +174,7 @@ class YouZhi():
                 data_18.append(data)
             if data[0][2:4] == '19':
                 data_19.append(data)
-        date_list = [i[0][5:] for i in data_16]
+        date_list = [i[0][5:10] for i in data_16]
         data_item = {'date': date_list, 'data_list15': data_15, 'data_list16': data_16, 'data_list17': data_17,
                      'data_list18': data_18, 'data_list19': data_19}
         return data_item
@@ -185,7 +185,7 @@ class YouZhi():
         return {'data1':data1,'data2':data2}
 
 
-    def write_mysql(self, data_items,png_items):
+    def write_mysql(self, data_items,png_items,content_items):
         con = pymysql.connect(host="94.191.80.61", user="alazhijia", password="root", db="GuanTongDaily", port=3306,
                               charset='utf8')
         cur = con.cursor()
@@ -194,8 +194,8 @@ class YouZhi():
         # cur.execute(drop_sql,str(self.today))
         # con.commit()
         # 添加
-        sql = 'insert into daily_youzhi (date,data_items,png_items) values (%s,%s,%s)'
-        cur.execute(sql, (str(self.today)[:10],data_items,png_items))
+        sql = 'insert into daily_youzhi (date,data_items,png_items,content_items) values (%s,%s,%s,%s)'
+        cur.execute(sql, (str(self.today)[:10],data_items,png_items,content_items))
         con.commit()
         con.close()
         self.logger.info('油脂信息写入成功!')
@@ -224,7 +224,8 @@ class YouZhi():
         png_items = {'yzlr_png_item':yzlr_png_item}
         data_items = json.dumps(data_items)
         png_items = json.dumps(png_items)
-        self.write_mysql(data_items, png_items)
+        content_items = json.dumps({"content_list":["略"]})
+        self.write_mysql(data_items,png_items,content_items)
 
 if __name__ == '__main__':
     yz = YouZhi()

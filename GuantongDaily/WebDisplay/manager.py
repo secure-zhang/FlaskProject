@@ -2,6 +2,9 @@
 
 from __init__ import app,login_user, login_required,login_manager,logout_user
 from flask import render_template,session
+from gevent.pywsgi import WSGIServer
+
+
 
 # 首页
 @app.route('/',methods=['GET','POST'])
@@ -18,9 +21,11 @@ def test():
 
 # 异常处理
 @app.errorhandler(404)
+
 def not_found(e):
     return render_template('error.html')
 
 if __name__ == '__main__':
-    # app.run(host='0.0.0.0',port=8000)
-    app.run()
+    # http_server = WSGIServer(('127.0.0.1', 8000), app)
+    http_server = WSGIServer(('0.0.0.0', 8000), app)
+    http_server.serve_forever()

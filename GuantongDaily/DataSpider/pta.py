@@ -194,7 +194,7 @@ class Pta():
         data_itme = {'date':date_list,'data_list15':data_15,'data_list16':data_16,'data_list17':data_17,'data_list18':data_18,'data_list19':data_19}
         return data_itme
 
-    def write_mysql(self, data_items,png_items):
+    def write_mysql(self, data_items,png_items,content_items):
         con = pymysql.connect(host="94.191.80.61", user="alazhijia", password="root", db="GuanTongDaily", port=3306,
                               charset='utf8')
         cur = con.cursor()
@@ -203,8 +203,8 @@ class Pta():
         # cur.execute(drop_sql,str(self.today))
         # con.commit()
         # 添加
-        sql = 'insert into daily_pta (date,data_items,png_items) values (%s,%s,%s)'
-        cur.execute(sql, (str(self.today)[:10],data_items,png_items))
+        sql = 'insert into daily_pta (date,data_items,png_items,content_items) values (%s,%s,%s,%s)'
+        cur.execute(sql, (str(self.today)[:10],data_items,png_items,content_items))
         con.commit()
         con.close()
         self.logger.info('PTA信息写入成功!')
@@ -245,12 +245,12 @@ class Pta():
         xhkc_data_item = self.xhkc("s5446169")
         kgl_data_item = self.kgl("s5417017")
 
-        data_items = {'content_list':content_list,'qhhq_data_item':qhhq_data_item,'xhhq_data_item':xhhq_data_item}
+        data_items = {'qhhq_data_item':qhhq_data_item,'xhhq_data_item':xhhq_data_item}
         png_items = {'jicha_data_item':jicha_data_item,'jdd_data_item':jdd_data_item,'xhkc_data_item':xhkc_data_item,'kgl_data_item':kgl_data_item}
         data_items = json.dumps(data_items)
         png_items = json.dumps(png_items)
-        self.write_mysql(data_items,png_items)
-
+        content_items = json.dumps({"content_list":content_list})
+        self.write_mysql(data_items,png_items,content_items)
 
 
 

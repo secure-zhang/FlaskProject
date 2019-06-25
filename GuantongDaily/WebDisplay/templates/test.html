@@ -2,40 +2,48 @@
 {% extends 'base.html' %}
 {% block main %}
 <body>
-<form class="layui-form" action="">
-  <div class="layui-form-item">
-    <label class="layui-form-label" >选择框</label>
-    <div class="layui-input-block" style="width: 100px">
-      <select name="city" lay-verify="required" >
-        <option value=""></option>
-        <option value="0">北京</option>
-        <option value="1">上海</option>
-        <option value="2">广州</option>
-        <option value="3">深圳</option>
-        <option value="4">杭州</option>
-      </select>
-    </div>
-  </div>
-  <div class="layui-form-item">
-    <div class="layui-input-block">
-      <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
-    </div>
-  </div>
-</form>
+<table>
+    <tr>
+        <td class="td">1</td>
+        <td >2%</td>
+        <td >-3</td>
+        <td >3</td>
+    </tr>
+    <tr>
+        <td >4</td>
+        <td >-1</td>
+        <td >6</td>
+    </tr>
+    <tr>
+        <td >7</td>
+        <td >8</td>
+        <td >9</td>
+    </tr>
+    <tr>
+        <td >7</td>
+        <td >8</td>
+        <td >9</td>
+    </tr>
+</table>
 
-<script>
-//Demo
-layui.use('form', function(){
-  var form = layui.form;
 
-  //监听提交
-  form.on('submit(formDemo)', function(data){
-    layer.msg(JSON.stringify(data.field));
-    return false;
-  });
-});
+
+
+<script type="text/javascript">
+//记得放到最后，因为必须等表格呈现之后才可以改变样式颜色
+    table = document.getElementsByTagName('table'); //获取集合
+    alert(table[0].rows.length);
+    for (i = 0; i < table[0].rows.length; i++) {//遍历
+        td = table[0].rows[i].cells[1];//取出td
+        if (td.textContent <= 2) {//判断是否大于0
+            td.style.backgroundColor = "red";//小于等于0变成红色
+        } else {
+            td.style.backgroundColor = "green";//否则变成绿色
+        }
+    }
 </script>
-</body>
 
-</html>
+
+
+
 {% endblock %}
