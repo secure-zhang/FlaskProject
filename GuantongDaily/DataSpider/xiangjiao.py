@@ -5,7 +5,7 @@ from config import logger
 from WindPy import *
 from bs4 import BeautifulSoup
 import requests,datetime,re,pymssql,pymysql
-logger = logger('SHUHUA')
+logger = logger('XIANGJIAO')
 
 class XiangJiao():
     header = {'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',

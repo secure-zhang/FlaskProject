@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 app = Flask(__name__)
 
-app.debug=True
+# app.debug=True
 app.config["SECRET_KEY"] = "rootzhang"
 app.secret_key = os.urandom(24)
 
