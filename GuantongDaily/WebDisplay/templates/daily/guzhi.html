@@ -282,8 +282,8 @@
 //记得放到最后，因为必须等表格呈现之后才可以改变样式颜色
     td_list = document.getElementsByClassName('rdbk_td'); //获取集合
     for (i = 0; i < td_list.length; i++) {//遍历
-        if (td_list[i].textContent <= 0) {//判断是否大于0
-            td_list[i].style.backgroundColor = "#DDA0DD";//小于等于0变成红色
+        if (td_list[i].textContent.replace('%','') <= 0) {//判断是否大于0
+            td_list[i].style.backgroundColor = "#DA70D6";//小于等于0变成红色
         } else {
             td_list[i].style.backgroundColor = "#C1FFC1";//否则变成绿色
         }
