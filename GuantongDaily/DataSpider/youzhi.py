@@ -90,24 +90,27 @@ class YouZhi():
     def jc(self, param, num):
         oneday = datetime.timedelta(days=1)
         lastday = self.today - 365 * oneday
+        # 历史价格
         his_wData = w.edb('%s,%s' % param, str(lastday - num * oneday)[:10], str(lastday)[:10], "Fill=Previous")
-        wData = w.edb('%s,%s' % param, str(self.today - num * oneday)[:10], str(self.today)[:10], "Fill=Previous")
-        his_data1 = his_wData.Data[0]
-        his_data2 = his_wData.Data[1]
+        xh_his_data = his_wData.Data[0]
+        qh_his_data = his_wData.Data[1]
+        xh_his_jg, xh_his_zr_jg, xh_his_zd = self.jicha(xh_his_data)
+        qh_his_jg, qh_his_zr_jg, qh_his_zd = self.jicha(qh_his_data)
+        his_jc = xh_his_jg - qh_his_jg
 
+        # 今日价格
+        wData = w.edb('%s,%s' % param, str(self.today - num * oneday)[:10], str(self.today)[:10], "Fill=Previous")
         data1 = wData.Data[0]
         data2 = wData.Data[1]
+        xh_jg, xh_zr_jg, xh_zd = self.jicha(data1)
+        qh_jg, qh_zr_jg, qh_zd = self.jicha(data2)
 
-        his_jg_1, his_zr_jg_1, his_zd_1 = self.jicha(his_data1)
-        his_jg_2, his_zr_jg_2, his_zd_2 = self.jicha(his_data2)
-        his_jc = his_jg_1 - his_jg_2
-
-        jg_1, zr_jg_1, zd1 = self.jicha(data1)
-        jg_2, zr_jg_2, zd2 = self.jicha(data2)
-        jc = jg_1 - jg_2
+        jc = xh_jg - qh_jg
+        zr_jc = xh_zr_jg-qh_zr_jg
+        zd = jc-zr_jc
         tb_v = jc - his_jc
         tb_b = tb_v / his_jc
-        data_item = {'jg': jg_1, 'zr_jg': zr_jg_1, 'zd': zd1, 'tb_v': tb_v, 'tb_b': '%.2f' % tb_b}
+        data_item = {'jg': jc, 'zr_jg': zr_jc, 'zd': zd, 'tb_v': tb_v, 'tb_b': '%.2f' % tb_b}
         return data_item
 
     def jc_main(self, param1, param2, param3, param4, param5, num):
@@ -209,7 +212,7 @@ class YouZhi():
         cp_data_item = self.qhhq("RM01M.CZC","RM05M.CZC","RM09M.CZC",5)
         ypb_data_item = self.ypb("Y09M.DCE","M09M.DCE","OI09M.CZC","RM09M.CZC",5)
         kc_data_item = self.kc("s0117164","s5028184","s5006381")
-        # # # 棕榈油 豆油 豆粕 菜油 菜粕
+        # # 棕榈油 豆油 豆粕 菜油 菜粕
         jc_data_item = self.jc_main(("s5006006","m0066353"),("s5005994","m0066354"),
                                ("s5006046","m0066352"),("s0142926","m0066365"),
                                ("s5005872","s0177552"),10)

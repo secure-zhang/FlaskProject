@@ -7,7 +7,7 @@ if __name__ == '__main__':
 
     while True:
         now_time = datetime.datetime.now().strftime('%H%M')
-        if now_time > '1545' and now_time < '1750':
+        if now_time > '1545' and now_time < '1700':
             os.system('python jiachun.py')
             os.system('python guzhi.py')
             os.system('python shuhua.py')

@@ -18,11 +18,11 @@ from xiangjiao import XiangJiao
 
 
 if __name__ == '__main__':
-    sh = ShuHua()
-    sh.run()
-    xj = XiangJiao()
-    xj.run()
-    jc = JiaChun()
-    jc.run()
+    # sh = ShuHua()
+    # sh.run()
+    # xj = XiangJiao()
+    # xj.run()
+    # jc = JiaChun()
+    # jc.run()
     gz = GuZhi()
     gz.run()

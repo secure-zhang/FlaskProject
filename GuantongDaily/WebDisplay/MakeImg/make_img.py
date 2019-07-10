@@ -50,9 +50,11 @@ class ShuHua():
         fig.autofmt_xdate(rotation=45)
 
         # 显示图形
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name)
+        plt.clf()
+        plt.close()
 
-    # 生成塑化净多单图片
+        # 生成塑化净多单图片
     def jdd(self, param):
         self.shuhua_jdd(param['data1'], self.save_path % 'jdd1')
         self.shuhua_jdd(param['data2'], self.save_path % 'jdd2')
@@ -84,9 +86,11 @@ class ShuHua():
         # plt.tick_params(labelsize=25)
         fig.autofmt_xdate(rotation=45)
 
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name,dpi=150)
+        plt.clf()
+        plt.close()
 
-    # 生成塑化基差图片
+        # 生成塑化基差图片
     def jicha(self, param):
         data1 = param['data1']
         data2 = param['data2']
@@ -152,9 +156,11 @@ class ShuHua():
         fig.autofmt_xdate(rotation=45)
         plt.legend(fontsize=20, loc='upper right')
         # 显示图形
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name)
+        plt.clf()
+        plt.close()
 
-    # 生成塑化价差图片
+        # 生成塑化价差图片
     def jiacha(self, param):
         self.shuhua_jiacha(param['data1'], self.save_path % 'jiacha1')
         self.shuhua_jiacha(param['data2'], self.save_path % 'jiacha2')
@@ -240,7 +246,9 @@ class XiangJiao():
         fig.autofmt_xdate(rotation=45)
         plt.legend(fontsize=20, loc='upper right')
         # 显示图形
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name,dpi=150)
+        plt.clf()
+        plt.close()
 
     def jicha(self,param,png_path_name):
         date_list = [i[0] for i in param]
@@ -268,7 +276,9 @@ class XiangJiao():
         # plt.tick_params(labelsize=25)
         fig.autofmt_xdate(rotation=45)
 
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name,dpi=150)
+        plt.clf()
+        plt.close()
 
     def jdd(self,param, png_path_name):
 
@@ -296,7 +306,9 @@ class XiangJiao():
         fig.autofmt_xdate(rotation=45)
 
         # 显示图形
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name)
+        plt.clf()
+        plt.close()
 
     def wpqh(self,param, png_path_name):
         date_list = param['date']
@@ -327,7 +339,9 @@ class XiangJiao():
         fig.autofmt_xdate(rotation=45)
 
         # 显示图形
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name,dpi=150)
+        plt.clf()
+        plt.close()
 
     def run(self):
         logger.info('MAKEING XIANGJIAO PNG...')
@@ -389,8 +403,10 @@ class JiaChun():
         # plt.tick_params(labelsize=25)
         fig.autofmt_xdate(rotation=45)
 
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name,dpi=150)
         # plt.show()
+        plt.clf()
+        plt.close()
 
     def pplr(self,param,png_path_name):
         date_list = [i[0] for i in param]
@@ -419,8 +435,10 @@ class JiaChun():
         # plt.tick_params(labelsize=25)
         fig.autofmt_xdate(rotation=45)
 
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name,dpi=150)
         # plt.show()
+        plt.clf()
+        plt.close()
 
     def jdd(self,param, png_path_name):
 
@@ -448,7 +466,9 @@ class JiaChun():
         fig.autofmt_xdate(rotation=45)
 
         # 显示图形
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name)
+        plt.clf()
+        plt.close()
 
     def xh(self,param,png_path_name):
         date = param['date']
@@ -506,7 +526,9 @@ class JiaChun():
         plt.tick_params(labelsize=20)
         fig.autofmt_xdate(rotation=45)
         # 显示图形
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name)
+        plt.clf()
+        plt.close()
 
     def run(self):
         logger.info('MAKEING JIACHUN PNG...')
@@ -576,10 +598,12 @@ class GuZhi():
 
         # 显示图形
         plt.savefig(png_path_name)
+        plt.clf()
+        plt.close()
 
 
 
-    # 生成塑化基差图片
+        # 生成塑化基差图片
     def jc(self, param,png_path_name):
         data1 = param['data1']
         data2 = param['data2']
@@ -627,6 +651,8 @@ class GuZhi():
 
         # 显示图形
         plt.savefig(png_path_name)
+        plt.clf()
+        plt.close()
 
     def kcjc(self, param,png_path_name):
         data1 = param['data1']
@@ -679,6 +705,8 @@ class GuZhi():
 
         # 显示图形
         plt.savefig(png_path_name)
+        plt.clf()
+        plt.close()
 
     def run(self):
         logger.info('MAKEING GUZHI PNG...')
@@ -732,8 +760,10 @@ class YuanYou():
         # plt.tick_params(labelsize=25)
         fig.autofmt_xdate(rotation=45)
 
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name,dpi=150)
         # plt.show()
+        plt.clf()
+        plt.close()
 
     def kgl(self,param,png_path_name):
         date = param['date']
@@ -791,7 +821,9 @@ class YuanYou():
         fig.autofmt_xdate(rotation=45)
         # plt.legend(fontsize=20, loc='upper right')
         # 显示图形
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name)
+        plt.clf()
+        plt.close()
 
     def kc(self,param,png_path_name):
         date_list = [i[0] for i in param]
@@ -816,8 +848,10 @@ class YuanYou():
         # plt.tick_params(labelsize=25)
         fig.autofmt_xdate(rotation=45)
 
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name,dpi=150)
         # plt.show()
+        plt.clf()
+        plt.close()
 
     def cc(self,param,png_path_name):
         date_list1 = [i[0] for i in param['data1']]
@@ -843,8 +877,10 @@ class YuanYou():
         # plt.tick_params(labelsize=25)
         fig.autofmt_xdate(rotation=45)
 
-        plt.savefig(png_path_name,dpi=300)
+        plt.savefig(png_path_name,dpi=150)
         # plt.show()
+        plt.clf()
+        plt.close()
 
     def run(self):
         logger.info('MAKEING YUANYOU PNG...')
@@ -926,7 +962,7 @@ class YouZhi():
                  data_list19,  # y轴数据
                  linestyle='-',  # 折线类型
                  linewidth=3,  # 折线宽度
-                 color='#000000',  # 折线颜色
+                 color='red',  # 折线颜色
                  label='2019')
         # 获取图的坐标信息
         ax = plt.gca()
@@ -940,6 +976,8 @@ class YouZhi():
         fig.autofmt_xdate(rotation=45)
         # 显示图形
         plt.savefig(png_path_name)
+        plt.clf()
+        plt.close()
 
     def run(self):
         logger.info('MAKEING YOUZHI PNG...')
@@ -951,26 +989,28 @@ class YouZhi():
         self.yzlr(json_items['yzlr_png_item']['data2'], self.save_path % 'yzlr2')
 
 def main():
-    ShuHua().run()
+    # ShuHua().run()
     XiangJiao().run()
-    JiaChun().run()
-    GuZhi().run()
-    YouZhi().run()
-    YuanYou().run()
+    # JiaChun().run()
+    # GuZhi().run()
+    # YouZhi().run()
+    # YuanYou().run()
 if __name__ == '__main__':
     main()
     while True:
         now_time = datetime.datetime.now().strftime('%H%M')
-        if now_time > '1640' and now_time <'1800':
+        if now_time > '1640' and now_time <'1700':
             logger.info('%s Start ...'%now_time)
             ShuHua().run()
             XiangJiao().run()
             JiaChun().run()
             GuZhi().run()
             YouZhi().run()
-        if now_time > '0830' and now_time <'0850':
+            time.sleep(500)
+        if now_time > '0810' and now_time <'0830':
             YuanYou().run()
-        time.sleep(600)
+            time.sleep(500)
+        time.sleep(3)
 
 
 

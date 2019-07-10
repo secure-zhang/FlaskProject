@@ -64,7 +64,7 @@ class YouZhi():
                  data_list19,  # y轴数据
                  linestyle='-',  # 折线类型
                  linewidth=3,  # 折线宽度
-                 color='#000000',  # 折线颜色
+                 color='red',  # 折线颜色
                  label='2019')
         # 获取图的坐标信息
         ax = plt.gca()

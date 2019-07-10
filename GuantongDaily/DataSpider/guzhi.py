@@ -84,17 +84,9 @@ class GuZhi():
     def jkd(self,num):
         self.logger.info('正在采集净空单...')
         data1 = self.content_mssql('if',num)
-        data2 = self.content_mssql('ih',num)
-        data3 = self.content_mssql('ic',num)
         data_item = {}
         for i in data1:
             data_item[i[0]] = i[1]
-        for i in data2:
-            if i[0] in data_item:
-                data_item[i[0]] += i[1]
-        for i in data3:
-            if i[0] in data_item:
-                data_item[i[0]] += i[1]
         return data_item
 
     def ReDianApi(self,ids):
