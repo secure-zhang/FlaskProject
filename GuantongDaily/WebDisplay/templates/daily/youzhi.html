@@ -247,7 +247,7 @@
         <tr class="line_hight text_center">
             <form action="{{ url_for("youzhi") }}"  method="post" name="make_png">
                 <td colspan="4">
-                    <span class="font_color">跨品种套利价差</span>
+                    <span class="font_color">跨品种套利价差<span class="unit">(单位:元/吨)</span></span>
                     <select name="kpztljc1" >
                         <option value="{{ item.kpztljc1.0 }}">{{ item.kpztljc1.1 }}</option>
                         <option value="a-1+1月大豆">1月大豆</option>
@@ -322,7 +322,7 @@
                     </select>
                 </td>
                 <td colspan="4">
-                    <span class="font_color">品种比价</span>
+                    <span class="font_color">品种比价<span class="unit">(单位:元/吨)</span></span>
                     <select name="pzbj1" >
                         <option value="{{ item.pzbj1.0 }}">{{ item.pzbj1.1 }}</option>
                           <option value="a-1+1月大豆">1月大豆</option>
@@ -464,7 +464,7 @@
             <td>-</td>
         </tr>
         <tr class="text_center">
-            <td colspan="2">豆油商业库存</td>
+            <td colspan="2">棕榈油港口库存</td>
             <td>{{ items.kc_data_item.data3.jg }}</td>
             <td>{{ items.kc_data_item.data3.zr_jg }}</td>
             <td>{{ items.kc_data_item.data3.zd }}</td>
@@ -543,8 +543,8 @@
         </tr>
 {#        image#}
         <tr class="line_hight">
-            <td colspan="4" class="font_color" >巴西大豆-江苏榨利</td>
-            <td colspan="4" class="font_color" >美湾大豆-江苏榨利</td>
+            <td colspan="4" class="font_color" >巴西大豆-江苏榨利<span class="unit">(单位:元/吨)</span></td>
+            <td colspan="4" class="font_color" >美湾大豆-江苏榨利<span class="unit">(单位:元/吨)</span></td>
         </tr>
         <tr >
             <td colspan="4"  class="right_border">

@@ -65,7 +65,9 @@ class JiaChun():
         ax_sub.plot(date_list, data_list1, color='black', linewidth=1, label='期货')
         ax.plot(date_list, data_list2, color='#CD0000', linewidth=1, label='现货')
         ax.bar(date_list, data_list3, linewidth=0.5, color='#7CCD7C', label='基差')
-        ax_sub.set_yticks([0,max(data_list1)//2,max(data_list1)])
+        # ax_sub.set_yticks([max(data_list1)//8,max(data_list1)*2//8,max(data_list1)*3//8,max(data_list1)*4//8,max(data_list1)*5//8,max(data_list1)*6//8,max(data_list1)*7/8,max(data_list1)])
+        ax_sub.set_yticks([i*500 for i in range(9)])
+        ax.set_yticks([i*1000 for i in range(-2,12)])
 
         # 获取图的坐标信息
         ax = plt.gca()
@@ -196,6 +198,7 @@ class JiaChun():
         #
         # # 进口利润
         jklr_data_item = json_items['jklr_data_item']
+        jklr_data_item['data1'].sort()
         self.jicha(jklr_data_item['data1'], self.save_path % 'jklr')
 
 if __name__ == '__main__':

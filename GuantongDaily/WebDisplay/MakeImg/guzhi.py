@@ -24,9 +24,9 @@ class GuZhi():
 
 
     def jkd(self,param, png_path_name):
-        date_list = [k for k,v in param.items()]
-        data_list = [abs(v) for k,v in param.items()]
-
+        param = sorted(param.items(),key=lambda x:x[0],reverse=True)
+        date_list = [i[0] for i in param]
+        data_list = [abs(i[1]) for i in param]
         # 设置图框的大小
         fig = plt.figure(figsize=(10, 6))
         # 绘图

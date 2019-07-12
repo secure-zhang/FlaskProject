@@ -243,7 +243,7 @@ class YuanYou():
     def main(self):
         w.start()
         content_list = self.pzfx()
-        qhhq_data_item = self.qhhq("CLQ19E.NYM","BQ19E.IPE","SC1907.INE",5)
+        qhhq_data_item = self.qhhq("CLQ19E.NYM","BU19E.IPE","SC1908.INE",5)
         xhhq_data_item = self.xhhq("s5111903","s5111905","s0031528",5)
 
         sc_data_item = self.sc_jicha("m0330182","s0031528","M0000185",300)

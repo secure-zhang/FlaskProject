@@ -232,6 +232,7 @@ class JiaChun():
                 lr = hdjc-jkcb
                 data1.append([str(k),hdjc,jkcb,lr])
         data_item = {'data1':data1}
+        print(data_item)
         return data_item
 
 
