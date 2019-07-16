@@ -5,11 +5,12 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.7 (Flaskproject--HNY2Fq6)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6 (GuantongZhangJobs)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="WindIndexSpider" />
     <orderEntry type="module" module-name="newSpider" />
     <orderEntry type="module" module-name="WindIndexSpider" />
+    <orderEntry type="module" module-name="CcfeiSpider" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />

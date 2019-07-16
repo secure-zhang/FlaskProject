@@ -15,3 +15,8 @@ datas = Blueprint('datas',__name__)
 def cjcc():
     num,result = SelectDatas().select_cjcc()
     return render_template('datas/cjcc.html',result=result,num=num)
+# 尿素图
+@app.route('/nsMap',methods=['GET'])
+# @login_required
+def nsMap():
+    return render_template('datas/nsMap.html')

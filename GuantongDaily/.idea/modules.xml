@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/Desktop/myfile/MyProject/CcfeiSpider/.idea/CcfeiSpider.iml" filepath="$USER_HOME$/Desktop/myfile/MyProject/CcfeiSpider/.idea/CcfeiSpider.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/GT.iml" filepath="$PROJECT_DIR$/.idea/GT.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../WindIndexSpider/.idea/WindIndexSpider.iml" filepath="$PROJECT_DIR$/../../WindIndexSpider/.idea/WindIndexSpider.iml" />
       <module fileurl="file://$PROJECT_DIR$/../WindIndexSpider/.idea/WindIndexSpider.iml" filepath="$PROJECT_DIR$/../WindIndexSpider/.idea/WindIndexSpider.iml" />
