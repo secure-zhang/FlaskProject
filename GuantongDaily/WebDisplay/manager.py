@@ -5,7 +5,6 @@ from flask import render_template,session
 from gevent.pywsgi import WSGIServer
 
 
-
 # 首页
 @app.route('/',methods=['GET','POST'])
 @login_required
@@ -29,6 +28,6 @@ def not_found(e):
     return render_template('error.html')
 
 if __name__ == '__main__':
-    http_server = WSGIServer(('127.0.0.1', 5000), app)
-    # http_server = WSGIServer(('0.0.0.0', 8000), app)
+    # http_server = WSGIServer(('127.0.0.1', 5000), app)
+    http_server = WSGIServer(('0.0.0.0', 8000), app)
     http_server.serve_forever()
