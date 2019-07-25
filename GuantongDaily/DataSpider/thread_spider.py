@@ -36,7 +36,7 @@ class WindApi:
 
     def _readTxt(self):
         '''读取文件获得指标信息'''
-        with open('jbm2.txt', 'r', encoding='utf-8') as f:
+        with open('jbm.txt', 'r', encoding='utf-8') as f:
             file = f.read()
         for i in file.split('\n'):
             if not i :

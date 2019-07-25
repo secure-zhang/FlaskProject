@@ -31,7 +31,7 @@ province_distribution = {
 list1 = [v for k,v in province_distribution.items()]
 provice=list(province_distribution.keys())
 values=list(province_distribution.values())
-map.add("", provice, values, visual_range=[min(list1), max(list1)],  maptype='china', is_visualmap=True,is_label_show=True,
+map.add("", provice, values, visual_range=[min(list1), max(list1)],  maptype='world', is_visualmap=True,is_label_show=True,
     visual_text_color='#000')
 map.show_config()
-map.render(path="./templates/datas/nsMap.html")
+map.render(path="nsMap.html")

@@ -10,6 +10,30 @@ from make_youzhi import YouZhi
 from flask import Blueprint
 daily = Blueprint('daily',__name__)
 
+# 尿素信息
+@app.route('/daily/niaoshu',methods=['GET'])
+def niaoshu():
+    S= SelectDatas()
+    content_item = S.select_data('content_items','daily_niaoshu')
+    content_item = json.loads(content_item)
+    json_items = S.select_data('data_items','daily_niaoshu')
+    json_items = json.loads(json_items)
+    today = str(datetime.datetime.today())[:10]
+    return render_template('daily/niaoshu.html', today=today,content=content_item,items=json_items,val1=time.time())
+
+# 棉花信息
+@app.route('/daily/mianhua',methods=['GET'])
+def mianhua():
+    today = str(datetime.datetime.today())[:10]
+    return render_template('daily/mianhua.html', today=today,val1=time.time())
+
+# 玉米信息
+@app.route('/daily/yumi',methods=['GET'])
+def yumi():
+    today = str(datetime.datetime.today())[:10]
+    return render_template('daily/yumi.html', today=today,val1=time.time())
+
+
 # 股指信息
 @app.route('/daily/guzhi',methods=['GET'])
 @login_required
