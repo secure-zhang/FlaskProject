@@ -1,5 +1,5 @@
 # -*- encoding:utf-8-*-
-# 采集股原油日报所需要的所有数据
+# 采集股油脂日报所需要的所有数据
 import json
 from config import logger
 from WindPy import *
@@ -177,6 +177,7 @@ class YouZhi():
                 data_18.append(data)
             if data[0][2:4] == '19':
                 data_19.append(data)
+
         date_list = [i[0][5:10] for i in data_16]
         data_item = {'date': date_list, 'data_list15': data_15, 'data_list16': data_16, 'data_list17': data_17,
                      'data_list18': data_18, 'data_list19': data_19}

@@ -22,12 +22,13 @@ def test():
 
 
 # 异常处理
+@app.errorhandler(500)
 @app.errorhandler(404)
 @login_required
 def not_found(e):
     return render_template('error.html')
 
 if __name__ == '__main__':
-    # http_server = WSGIServer(('127.0.0.1', 5000), app)
-    http_server = WSGIServer(('0.0.0.0', 8000), app)
+    http_server = WSGIServer(('127.0.0.1', 5000), app)
+    # http_server = WSGIServer(('0.0.0.0', 8000), app)
     http_server.serve_forever()

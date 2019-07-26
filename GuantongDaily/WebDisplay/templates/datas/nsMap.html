@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>尿素</title>
+{% extends 'base.html' %}
+{% block main %}
     <script src="../../static/js/echarts_map.js"></script>
 
 
-</head>
-<body>
+<div class="main">
     <div id="162cf849859949119d0690867e7b361f" style="width:1200px;height:800px;"></div>
     <script type="text/javascript">
 
@@ -249,5 +245,5 @@ var option_162cf849859949119d0690867e7b361f = {
 myChart_162cf849859949119d0690867e7b361f.setOption(option_162cf849859949119d0690867e7b361f);
 
 </script>
-</body>
-</html>
+</div>
+{% endblock %}

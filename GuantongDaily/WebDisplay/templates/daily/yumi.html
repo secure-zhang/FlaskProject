@@ -1,10 +1,372 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block main %}
+    <style>
+    table{border: 2px solid black;background-color: white;margin: 0 auto;width:980px;line-height: 30px;}
+    .content_left{font-size: 14px;text-align: left;text-indent: 2em}
+    .line_hight{background-color: #5b80b2;height: 10px;}
+    .font_color{text-align: center;color: #0C0C0C;font-weight: bold;}
+    .whites{font-size: 20px;text-align: center;color: white;font-weight: bold}
+    .text_center{text-align: center}
+    .border_none td{border: none}
+</style>
+<div class="main">
+    <table id="table" border='1'  cellpadding='0' cellspacing='0 ' style="table-layout:fixed;word-wrap:break-word;word-break:break-all;">
+        <!--表头-->
+        <tr class="tableHead border_none" >
+            <td rowspan="2" colspan="3"  >
+                <img src="../../static/images/gtqh.png" alt="" style="width: 100%;height: 100%">
+            </td>
+            <td rowspan="2" colspan="1" ></td>
+            <td rowspan="1" colspan="4"  style="font-size: 30px ;font-weight: normal;" class="font_color">
+                <span class="">玉米信息速览</span>
+            </td>
+        </tr>
+        <tr class="font_color border_none" >
+            <td colspan="2" ></td>
+            <td colspan="2" >{{ today }}</td>
+        </tr>
+        <tr class="line_hight">
+            <td colspan="8" class="whites" >市场观点</td>
+        </tr>
+        <tr class="content_left" style="text-indent:2em;">
+            <td colspan="8">
+                {% for i in content.content_list %}
+                    <p><span class="layui-badge-dot"></span>{{ i }}</p>
+                {% endfor %}
+            </td>
+        </tr>
 
-</body>
-</html>
+{#        市场追踪#}
+        <tr class="line_hight">
+            <td colspan="8" class="whites" >市场追踪</td>
+        </tr>
+        <tr class=" font_color">
+            <td colspan="1">一级指标</td>
+            <td colspan="2">二级指标</td>
+            <td colspan="1">今日价格</td>
+            <td colspan="1">昨日价格</td>
+            <td colspan="1">增减</td>
+            <td colspan="2"></td>
+        </tr>
+{#        玉米#}
+        <tr class="text_center">
+            <td rowspan="6">跨期价差</td>
+            <td rowspan="3">玉米</td>
+            <td>1-5月</td>
+            <td>{{ items.ym_data_item.data1.jg }}</td>
+            <td>{{ items.ym_data_item.data1.zrjg }}</td>
+            <td>{{ items.ym_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>5-9月</td>
+            <td>{{ items.ym_data_item.data2.jg }}</td>
+            <td>{{ items.ym_data_item.data2.zrjg }}</td>
+            <td>{{ items.ym_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>9-1月</td>
+            <td>{{ items.ym_data_item.data3.jg }}</td>
+            <td>{{ items.ym_data_item.data3.zrjg }}</td>
+            <td>{{ items.ym_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#        淀粉#}
+        <tr class="text_center">
+            <td rowspan="3">淀粉</td>
+            <td>1-5月</td>
+            <td>{{ items.df_data_item.data1.jg }}</td>
+            <td>{{ items.df_data_item.data1.zrjg }}</td>
+            <td>{{ items.df_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>5-9月</td>
+            <td>{{ items.df_data_item.data2.jg }}</td>
+            <td>{{ items.df_data_item.data2.zrjg }}</td>
+            <td>{{ items.df_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td>9-1月</td>
+            <td>{{ items.df_data_item.data3.jg }}</td>
+            <td>{{ items.df_data_item.data3.zrjg }}</td>
+            <td>{{ items.df_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#跨品种#}
+        <tr class="text_center">
+            <td  rowspan="3">跨品种</td>
+            <td colspan="2">cs1-c01</td>
+            <td>{{ items.kpz_data_item.data1.jg }}</td>
+            <td>{{ items.kpz_data_item.data1.zrjg }}</td>
+            <td>{{ items.kpz_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">cs5-c05</td>
+            <td>{{ items.kpz_data_item.data2.jg }}</td>
+            <td>{{ items.kpz_data_item.data2.zrjg }}</td>
+            <td>{{ items.kpz_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">cs9-c09</td>
+            <td>{{ items.kpz_data_item.data3.jg }}</td>
+            <td>{{ items.kpz_data_item.data3.zrjg }}</td>
+            <td>{{ items.kpz_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{# 基差 #}
+        <tr class="text_center">
+            <td rowspan="5">基差</td>
+            <td colspan="2">哈尔滨</td>
+            <td>{{ items.jc_data_item.data1.jg }}</td>
+            <td>{{ items.jc_data_item.data1.zr_jg }}</td>
+            <td>{{ items.jc_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">大连</td>
+            <td>{{ items.jc_data_item.data2.jg }}</td>
+            <td>{{ items.jc_data_item.data2.zr_jg }}</td>
+            <td>{{ items.jc_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center" >
+            <td colspan="2">青岛</td>
+            <td>{{ items.jc_data_item.data3.jg }}</td>
+            <td>{{ items.jc_data_item.data3.zr_jg }}</td>
+            <td>{{ items.jc_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">上海</td>
+            <td>{{ items.jc_data_item.data4.jg }}</td>
+            <td>{{ items.jc_data_item.data4.zr_jg }}</td>
+            <td>{{ items.jc_data_item.data4.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">广东</td>
+            <td>{{ items.jc_data_item.data5.jg }}</td>
+            <td>{{ items.jc_data_item.data5.zr_jg }}</td>
+            <td>{{ items.jc_data_item.data5.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#淀粉现货报价#}
+       <tr class="text_center">
+            <td  rowspan="3">淀粉现货报价</td>
+            <td colspan="2">长春</td>
+            <td>{{ items.dfxh_data_item.data1.jg }}</td>
+            <td>{{ items.dfxh_data_item.data1.zr_jg }}</td>
+            <td>{{ items.dfxh_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">石家庄</td>
+            <td>{{ items.dfxh_data_item.data2.jg }}</td>
+            <td>{{ items.dfxh_data_item.data2.zr_jg }}</td>
+            <td>{{ items.dfxh_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">潍坊</td>
+            <td>{{ items.dfxh_data_item.data3.jg }}</td>
+            <td>{{ items.dfxh_data_item.data3.zr_jg }}</td>
+            <td>{{ items.dfxh_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#        image1#}
+        <tr class="line_hight text_center">
+            <form action="{{ url_for("yumi") }}"  method="post" name="make_png">
+                <td colspan="4">
+                    <span class="font_color">玉米跨期价差<span class="unit">(单位:)</span></span>
+                    <select name="ymkqjc1" >
+                        <option value="{{ item.ymkqjc1.0 }}">{{ item.ymkqjc1.1 }}</option>
+                        <option value="c-1+1月玉米">1月玉米</option>
+                        <option value="c-5+5月玉米">5月玉米</option>
+                        <option value="c-9+9月玉米">9月玉米</option>
+                    </select> —
+                    <select name="ymkqjc2" >
+                        <option value="{{ item.ymkqjc2.0 }}">{{ item.ymkqjc2.1 }}</option>
+                        <option value="c-1+1月玉米">1月玉米</option>
+                        <option value="c-5+5月玉米">5月玉米</option>
+                        <option value="c-9+9月玉米">9月玉米</option>
+                    </select>
+
+                </td>
+                <td colspan="4">
+                    <span class="font_color">淀粉跨期价差<span class="unit">(单位:)</span></span>
+                    <select name="dfkqjc1" >
+                        <option value="{{ item.dfkqjc1.0 }}">{{ item.dfkqjc1.1 }}</option>
+                        <option value="cs-1+1月玉米淀粉">1月玉米淀粉</option>
+                        <option value="cs-5+5月玉米淀粉">5月玉米淀粉</option>
+                        <option value="cs-9+9月玉米淀粉">9月玉米淀粉</option>
+                    </select> —
+                    <select name="dfkqjc2" >
+                        <option value="{{ item.dfkqjc2.0 }}">{{ item.dfkqjc2.1 }}</option>
+                        <option value="cs-1+1月玉米淀粉">1月玉米淀粉</option>
+                        <option value="cs-5+5月玉米淀粉">5月玉米淀粉</option>
+                        <option value="cs-9+9月玉米淀粉">9月玉米淀粉</option>
+                    </select> —
+
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                    <input type="submit" value="查询">
+                </td>
+            </form>
+        </tr>
+        <tr >
+            <td colspan="4" class="right_border">
+                <div style="width:487px;height:200px;">
+                    <img src="{{ url_for('static',filename='images/yumi/ymkqjc.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                </div>
+            </td>
+            <td colspan="4" >
+                <div style="width:487px;height:200px;">
+                    <img src="{{ url_for('static',filename='images/yumi/dfkqjc.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: center">
+                <b style="color: red">—— 2019</b>
+                <b style="color: #4169E1">—— 2018</b>
+                <b style="color: #8B4513">—— 2017</b>
+            </td>
+            <td colspan="4" style="text-align: center">
+                <b style="color: red">—— 2019</b>
+                <b style="color: #4169E1">—— 2018</b>
+                <b style="color: #8B4513">—— 2017</b>
+            </td>
+        </tr>
+{#        image2#}
+        <tr class="line_hight">
+            <td colspan="4" class="font_color" >玉米现货价格-蛇口<span class="unit">(单位:)</span></td>
+            <td colspan="4" class="font_color" >广东玉米库存<span class="unit">(单位:)</span></td>
+        </tr>
+        <tr >
+            <td colspan="4"  class="right_border">
+                <div style="width:487px;height:200px;">
+                    <img src="{{ url_for('static',filename='images/yumi/xhjg.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                </div>
+            </td>
+            <td colspan="4" >
+                <div style="width:487px;height:200px;">
+                    <img src="{{ url_for('static',filename='images/yumi/ymkc.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: center">
+                <b style="color: red">—— 2019</b>
+                <b style="color: #4169E1">—— 2018</b>
+                <b style="color: #8B4513">—— 2017</b>
+            </td>
+            <td colspan="4" style="text-align: center">
+                <b style="color: red">—— 2019</b>
+                <b style="color: #4169E1">—— 2018</b>
+                <b style="color: #8B4513">—— 2017</b>
+            </td>
+        </tr>
+
+{#        产业链追踪#}
+        <tr class="line_hight">
+            <td colspan="8" class="whites" >产业链追踪</td>
+        </tr>
+        <tr class=" font_color">
+            <td colspan="1" rowspan="2">一级指标</td>
+            <td colspan="2" rowspan="2">二级指标</td>
+            <td colspan="1" rowspan="2">今日价格</td>
+            <td colspan="1" rowspan="2">昨日价格</td>
+            <td colspan="1" rowspan="2">增减</td>
+            <td colspan="2">同比</td>
+        </tr>
+        <tr class="font_color">
+            <td>数值</td>
+            <td>百分比</td>
+        </tr>
+{#进口利润#}
+        <tr class="text_center">
+            <td  rowspan="3">进口利润</td>
+            <td colspan="2">玉米现货平均价</td>
+            <td>{{ items.jckr_data_item.data1.jg }}</td>
+            <td>{{ items.jckr_data_item.data1.zr_jg }}</td>
+            <td>{{ items.jckr_data_item.data1.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">美玉米到港完税成本</td>
+            <td>{{ items.jckr_data_item.data2.jg }}</td>
+            <td>{{ items.jckr_data_item.data2.zr_jg }}</td>
+            <td>{{ items.jckr_data_item.data2.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr class="text_center">
+            <td colspan="2">进口利润</td>
+            <td>{{ items.jckr_data_item.data3.jg }}</td>
+            <td>{{ items.jckr_data_item.data3.zr_jg }}</td>
+            <td>{{ items.jckr_data_item.data3.zd }}</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+{#        image3#}
+        <tr class="line_hight">
+            <td colspan="4" class="font_color" >玉米进口利润<span class="unit">(单位:)</span></td>
+            <td colspan="4" class="font_color" >玉米淀粉出厂价-山东潍坊<span class="unit">(单位:)</span></td>
+        </tr>
+        <tr >
+            <td colspan="4"  class="right_border">
+                <div style="width:487px;height:200px;">
+                    <img src="{{ url_for('static',filename='images/yumi/jklr.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                </div>
+            </td>
+            <td colspan="4" >
+                <div style="width:487px;height:200px;">
+                    <img src="{{ url_for('static',filename='images/yumi/sdwf.png',_t=val1) }}" width="100%" height="100%"   alt="">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: center">
+                <b style="color: red">—— 2019</b>
+                <b style="color: #4169E1">—— 2018</b>
+                <b style="color: #8B4513">—— 2017</b>
+            </td>
+            <td colspan="4" style="text-align: center">
+                <b style="color: red">—— 2019</b>
+                <b style="color: #4169E1">—— 2018</b>
+                <b style="color: #8B4513">—— 2017</b>
+            </td>
+        </tr>
+        <!--表尾-->
+        <tr class="line_hight">
+            <td colspan="8"></td>
+        </tr>
+        <tr>
+            <td colspan="1" class="font_color">免责声明</td>
+            <td colspan="7" class="content_left">本报告中的信息均来源于公开资料，我公司对这些信息的准确性和完整性不作任何保证。报告中的内容和意见仅供参考，并不构成对所述品种买卖的出价或征价。我公司及其雇员对使用本报告及其内容所引发的任何直接或间接损失概不负责。本报告仅向特定客户传送，版权归冠通期货所有。未经我公司书面许可，任何机构和个人均不得以任何形式翻版、复制、引用或转载。</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
