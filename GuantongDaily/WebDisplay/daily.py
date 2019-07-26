@@ -51,7 +51,7 @@ def youzhi():
 
 # 玉米信息
 @app.route('/daily/yumi',methods=['GET','POST'])
-# @login_required
+@login_required
 def yumi():
     item = {'ymkqjc1' : ['c-1+请选择','请选择'],'ymkqjc2' : ['c-1+请选择','请选择'],'dfkqjc1' : ['cs-1+请选择','请选择'],'dfkqjc2':  ['cs-1+请选择','请选择']}
     today = str(datetime.datetime.today())[:10]

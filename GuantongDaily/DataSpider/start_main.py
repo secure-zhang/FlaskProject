@@ -14,6 +14,8 @@ if __name__ == '__main__':
             os.system('python pta.py')
             os.system('python youzhi.py')
             os.system('python xiangjiao.py')
+            os.system('python niaoshu.py')
+            os.system('python yumi.py')
         if now_time > '0820' and now_time < '0850':
             os.system('python yuanyou.py')
 
