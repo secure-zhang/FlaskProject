@@ -103,7 +103,30 @@ class Content:
             print('油脂写入数据库成功')
         except:
             print('油脂写入数据库错误')
-
+    def niaoshu(self, item):
+        try:
+            cur = self.con.cursor()
+            sql = 'SELECT id FROM daily_niaoshu ORDER BY addTime DESC LIMIT 1'
+            cur.execute(sql)
+            tid = cur.fetchall()[0][0]
+            sql = 'UPDATE daily_niaoshu set content_items=%s  WHERE id=%s'
+            cur.execute(sql, (item, tid))
+            self.con.commit()
+            print('尿素写入数据库成功')
+        except:
+            print('尿素写入数据库错误')
+    def yumi(self, item):
+        try:
+            cur = self.con.cursor()
+            sql = 'SELECT id FROM daily_yumi ORDER BY addTime DESC LIMIT 1'
+            cur.execute(sql)
+            tid = cur.fetchall()[0][0]
+            sql = 'UPDATE daily_yumi set content_items=%s  WHERE id=%s'
+            cur.execute(sql, (item, tid))
+            self.con.commit()
+            print('玉米写入数据库成功')
+        except:
+            print('玉米写入数据库错误')
     def content(self,filename):
         with open('%s.txt'%filename,'r',encoding='utf-8') as f:
             lines_list = f.readlines()
@@ -136,6 +159,10 @@ class Content:
                     self.xiangjiao(data_item)
                 if 'youzhi' in line :
                     self.youzhi(data_item)
+                if 'niaoshu' in line :
+                    self.niaoshu(data_item)
+                if 'yumi' in line :
+                    self.yumi(data_item)
         input()
 
 if __name__ == '__main__':

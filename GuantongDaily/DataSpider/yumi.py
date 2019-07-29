@@ -93,7 +93,7 @@ class YuMi():
     def jklr_main(self, param1, param2,num):
         data1 = self.jklr_(param1,num)
         data2 = self.jklr_(param2,num)
-        data3 = {'jg':float('%.2f'%(data1['jg']-data2['jg'])) , 'zr_jg': float('%.2f'%(data1['zr_jg']-data2['zr_jg'])) , 'zd': data1['zd']-data2['zd']}
+        data3 = {'jg':float('%.2f'%(data1['jg']-data2['jg'])) , 'zr_jg': float('%.2f'%(data1['zr_jg']-data2['zr_jg'])) , 'zd':float('%.2f'%( data1['zd']-data2['zd']))}
         data_item = {'data1': data1, 'data2': data2, 'data3': data3}
         return data_item
     def xhjg_main(self,param1):
